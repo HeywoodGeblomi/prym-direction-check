@@ -1,2 +1,1 @@
-# prym-direction-check
-Preregistered check of whether recorded exact 2:1 Prym geodesics double-count unoriented orbits.
+$file:/workspace/publish_staging/prym-direction-check/README.md
