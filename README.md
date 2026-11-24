@@ -28,7 +28,6 @@ python3 rebuild/checks.py
 python3 square_tiled/validate.py
 ```
 
-## Files left out of this copy
+## Added data
 
-- `darryl_share.txt`: a chat log, not part of the scored record, and the filename contains a person's name.
-- `rebuild/lit/ln_g4.txt`, `rebuild/lit/ln_g4.pdf`, `rebuild/lit/ln_g34.txt`, `rebuild/lit/ln_g34.pdf`: literature copies. The text files contained academic email addresses, so they were dropped rather than rewritten. The PDFs are binaries. None of these are listed in the hash manifests.
+`darryl_share.txt` and the literature text files `rebuild/lit/ln_g4.txt` and `rebuild/lit/ln_g34.txt` are in this repo. The two literature PDFs could not be uploaded: the GitHub connector used here accepts text only, and `$file:` rejection for non-text files blocked `rebuild/lit/ln_g4.pdf` and `rebuild/lit/ln_g34.pdf`. I did not use `gh` or a raw API token as a workaround.
