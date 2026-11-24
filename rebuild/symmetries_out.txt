@@ -1,1 +1,16 @@
-$file:/workspace/publish_staging/prym-direction-check/rebuild/symmetries_out.txt
+1 identity (translation automorphisms), G=I
+1 rotation by pi (Prym involution), G=-I
+0 rotation by +90deg, G=[[0,-1],[1,0]]
+0 rotation by -90deg, G=[[0,1],[-1,0]]
+0 reflection x->-x, G=diag(-1,1)
+0 reflection y->-y, G=diag(1,-1)
+1 reflection swap x,y, G=[[0,1],[1,0]]
+1 reflection x,y->-y,-x, G=[[0,-1],[-1,0]]
+H cyl 0 singular on top True bottom True
+H cyl 1 singular on top True bottom True
+H cyl 2 singular on top True bottom True
+H cyl 3 singular on top True bottom True
+V cyl 0 singular on left True right True
+V cyl 1 singular on left True right True
+V cyl 2 singular on left True right True
+V cyl 3 singular on left True right True

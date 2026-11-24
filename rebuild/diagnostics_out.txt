@@ -1,1 +1,6 @@
-$file:/workspace/publish_staging/prym-direction-check/rebuild/diagnostics_out.txt
+H1- top exponent equals log rho(A): max rel err 5.329070518200751e-15
+8x8 symplectic violations 0
+words with two positive H1+ exponents 7080
+ratio l1/l2 quantiles [1.6799, 1.9468, 2.2945, 2.8536, 3.8212, 7.1221, 26.6927]
+closest to 2: [np.float64(1.9981007087153777), np.float64(1.9981007087153777), np.float64(1.9981007087153768), np.float64(1.9981007087153768), np.float64(1.998100708715376)]
+count in [1.9,2.1] 856

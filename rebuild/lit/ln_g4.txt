@@ -1,1 +1,1937 @@
-$file:/workspace/publish_staging/addback/prym-direction-check/rebuild/lit/ln_g4.txt
+                                                              WEIERSTRASS PRYM EIGENFORMS IN GENUS FOUR
+
+                                                                            ERWAN LANNEAU, DUC-MANH NGUYEN
+arXiv:1802.04879v1 [math.GT] 13 Feb 2018
+
+
+
+
+                                                                                       1. I NTRODUCTION
+                                              Let H (6) denote the space of pairs (X, ω), where X is a Riemann surface of genus four and ω is
+                                           a holomorphic 1-form on X having a single zero. Following [Mc06], Prym(6) is the subset of H (6)
+                                           where X admits a holomorphic involution (Prym involution) τ which has exactly two fixed points
+                                           and satisfies τ∗ ω = −ω. We will call such pairs Prym forms. The space of holomorphic 1-forms
+                                           Ω(X) on X splits into Ω− (X, τ) ⊕ Ω+ (X, τ) where Ω− (X, τ) is the eigenspace of the eigenvalue −1.
+                                           Similarly one has H − (X; Z) = {c ∈ H1 (X, Z), τ∗ c = −c}. Define P(X, τ) = (Ω− (X, τ))∗ /H1− (X; Z).
+                                           By definition P(X, τ) is a sub-abelian variety of Jac(X). We will call it the Prym variety of X. By
+                                           assumption we have dimC P(X, τ) = 2.
+                                              Recall that a discriminant is a positive integer congruent to 0 or 1 modulo 4. The quadratic order
+                                           with discriminant D is denoted by OD . We have OD ≃ Z[x]/(x2 + bx + c), for any (b, c) ∈ Z2 such that
+                                           b2 − 4c = D. For each discriminant D, we define ΩED (6) the subset of (X, ω) ∈ Prym(6) such that
+                                               (1) P(X, τ) admits a real multiplication by the quadratic order OD , and
+                                               (2) ω is an eigenvector for the action of OD .
+                                           Elements of ΩED (6) are called Prym eigenforms in H (6). For a more detailed definition, we refer
+                                           to [Mc06, LN14]. In [Mc06], McMullen showed that the locus ΩED (6) is a finite union of closed
+                                           GL+ (2, R)-orbits. The geometry of these affine invariant subvarieties has been recently investigated
+                                           in [Möl14, TZ16, TZ17, Zac17]. The main goal of this paper is to complete this description.
+                                           Theorem 1.1. For any discriminant D 6∈ {4, 9}, the locus ΩED (6) is non empty and connected.
+                                              We will see that ΩE4 (6) and ΩE9 (6) are empty.
+                                           A square-tiled surface is a form (X, ω) such that ω(γ) ∈ Z ⊕ ıZ for any γ ∈ H1 (X, Σ, Z), where Σ is
+                                           the zero set of ω. For such a surface, integration of the form ω gives a holomorphic map X → C/Z2
+                                           which can be normalized so that it is branched only above the origin. The n preimages of the square
+                                           [0, 1]2 provide a tiling of the surface X. We say that (X, ω) is primitive if
+                                                                        Λ(X, ω) := {ω(γ), γ ∈ H1 (X, Σ, Z)} = Z ⊕ iZ.
+                                              +
+                                           GL (2, R) acts naturally on Tn the set of degree n, primitive square-tiled surfaces in Prym(6). Along
+                                           the line we will also prove the following theorem for the topology of the branched covers:
+                                           Theorem 1.2. Let n ∈ Z be any integer. If n ≥ 8 is even then there is exactly one GL+ (2, R)-orbit in
+                                           Tn . Otherwise Tn is empty.
+                                             Theorem 1.2 generalizes previous result by [Mc05, HL06, LN14].
+                                             2000 Mathematics Subject Classification. Primary: 37E05. Secondary: 37D40.
+                                             Key words and phrases. Real multiplication, Prym locus, Teichmüller curve.
+                                                                                                  1
+2                                 ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+Outline. This paper is very much a continuation of [LN14] in which we announced a weaker version
+of Theorem 1.1. This weaker result is obtained by using tools and techniques similar to the ones
+developed in [LN14] (see also [Mc05]). However, because of some new phenomena in genus four,
+those tools are not sufficient to obtain Theorem 1.1. We will give below an overview of our strategy
+to prove Theorems 1.1 and 1.2.
+
+    (1) We start by showing that every GL+ (2, R)-orbit in ΩED (6) contains a horizontally periodic
+        surface with 4 horizontal cylinders (cf. Lemma 2.1). We then show that up to some renormal-
+        ization by GL+ (2, R), one can encode the corresponding cylinder decomposition by parame-
+        ters called prototypes (cf. Proposition 2.2). For a fixed discriminant D, the set of prototypes
+        is denoted by PD . Note that PD is a finite set.
+    (2) There are two different diagrams, called Model A and Model B, for 4-cylinder decompositions
+        of surfaces in Prym(6). Therefore, the set of prototypes PD is naturally split into two disjoint
+        subsets PDA and PDB according to the associated diagram.
+    (3) We next introduce the Butterfly move transformations on the set PDA (cf. Proposition 2.7).
+        Those transformations encode the switches from a 4-cylinder decomposition in Model A to
+        another 4-cylinder decomposition in Model A on the same surface. We will call an equiva-
+        lence class of the relation generated by the Butterfly moves in PDA a component of PDA . By
+        construction, surfaces associated with prototypes in the same component belong to the same
+        GL+ (2, R)-orbit. Thus we obtain an upper bound for the number of GL+ (2, R)-orbits in
+        ΩED (6) by the number of components of PDA .
+    (4) Using a similar strategy to the one used in [LN14] and [Mc05], one can classify the compo-
+        nents of PDA for D large enough (cf. Theorem 3.4). This classification reveals that PDA has two
+        components when D is even or D ≡ 1 mod 8. While the disconnectedness of PDA for D even
+        can be easily seen, the disconnectedness of PDA for D ≡ 1 mod 8 is somewhat more subtle (cf.
+        Lemma 3.1 and Lemma 3.2). This new phenomenon did not occur in genus two and three.
+            Theorem 3.4 implies immediately that ΩED (6) is connected if D ≡ 5 mod 8 (when D
+        is large enough). However, to our surprise, for the remaining values of D, the number
+        GL+ (2, R)-orbits in ΩED (6) is not equal to the number of the components of PDA . This is
+        another striking difference between genus four and genus two and three.
+    (5) To obtain Theorem 1.1 for D even and D ≡ 1 mod 8, one needs to connect two components
+        of PDA . For this purpose, we will introduce new transformations on the set of prototypes.
+            A prototype in PD is a quadruple of integers (w, h,t, e) satisfying some specific conditions
+        depending on D (see Proposition 2.2). Given a horizontally periodic surface in ΩED (6), it is
+        generally difficult to determine all the parameters of the prototype of the cylinder decompo-
+        sition in another periodic direction. Nevertheless, one important parameter, namely e, of this
+        prototype can be computed quite easily (cf. Lemma 4.1). This new tool turns out to be an
+        essential ingredient of our proofs. In what follows, we will only consider D large enough such
+        that the generic statements of Theorem 3.4 hold.
+           • Case D even: The two components of PDA are distinguished by the congruence class of
+              e modulo 4. To connect the two components of PDA , it suffices to construct a surface
+              which admits 4-cylinder decompositions in Model A in two different directions, such
+              that the corresponding e-parameters are not congruent modulo 4. For the case D is even
+              and not a square number, we make use of 4-cylinder decomposition in Model B, and
+                                   PRYM EIGENFORMS IN GENUS FOUR                                       3
+
+
+
+             new transformations called switch moves, which correspond to passages from a cylinder
+             decomposition in Model B to a cylinder decomposition in Model A. We will show that
+             one can always find a suitable prototypical surface in Model B, and two switch moves
+             among the four introduced in Proposition 5.1, such that the prototypes of the new periodic
+             directions belong to different components of PDA . For D is an even square number, we
+             will use 2-cylinder decompositions and adapted switch moves to get the same conclusion.
+             Details are given in Sections 6, and 7.
+          • Case D ≡ 1 mod 8: We denote the two components of PDA by PDA1 and PDA2 (see The-
+             orem 3.4). The two components PDAi can not be distinguished only by the e-parameter
+             in general. However, there is a simple sufficient (but not necessary) condition on the e-
+             parameter which allows us to conclude that the prototype belongs to PDA1 but not PDA2 . In
+             view of this observation, to prove Theorem 1.1 in this case, we construct a prototypical
+             surface from a suitable prototype in PDA2 and show that this surface admits a cylinder de-
+             composition in Model A with associated prototype in PDA1 . Details are given in Section 8.
+    (6) For small (and exceptional) values of D, Theorem 1.1 are proved “by hand” with computer
+        assistance.
+    (7) Theorem 1.2 is a direct consequence of Theorem 1.1 and the fact that a primitive square-tiled
+        surface in Prym(6) belongs to ΩEd 2 (6) if and only if it is constructed from 2d unit squares
+        (see Prop 4.2).
+Acknowledgements: The authors warmly thank Jonathan Zachhuber and David Torres for helpful
+conversations. This work was partially supported by the ANR Project GeoDyM and the Labex Persy-
+val.
+
+                2. C YLINDER DECOMPOSITIONS AND THE SPACE OF PROTOTYPES
+  The main goal of this section is to provide a canonical representation of any four cylinder decom-
+position of a surface in ΩED (6) in terms of prototype. We will also define an equivalence relation
+∼ on the set of prototypes such that the number of GL+ (2, R)-orbits in ΩED (6) is bounded by the
+number of equivalence classes of ∼.
+2.1. Four-cylinder decompositions. Recall that a cylinder is called simple if each of its boundary
+consists of a single saddle connection. We will call a cylinder semi-simple if one of its boundary
+components consists of a single saddle connection. If it is not simple, then we will call it strictly
+semi-simple. We first show
+Lemma 2.1. Let (X, ω) be a translation surface in ΩED (6) for some discriminant D. Then (X, ω)
+admits a 4-cylinder decomposition.
+Proof. By [Mc06], we know that (X, ω) is a Veech surface, hence it admits decompositions into
+cylinders in infinitely many directions. Recall that the Prym involution of X has a unique regular fixed
+point. Thus, a cylinder cannot be invariant by this involution. It follows that there are either 2 or 4
+cylinders in each cylinder decomposition.
+   Suppose that (X, ω) admits a 2-cylinder decomposition in the horizontal direction. Let us denote
+the two horizontal cylinders by C1 ,C2 . By inspecting all the possible configurations of the horizontal
+saddle connections, we see that for each i ∈ {1, 2}, there is a saddle connection which is contained in
+4                                  ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+both boundary components of Ci . Thus, there is a simple cylinder C which is filled by simple closed
+geodesics represented by geodesic segments joining a point in the bottom border of Ci and a point
+in the top border of Ci . Since (X, ω) is a Veech surface, it admits a cylinder decomposition in the
+direction of C. Since C is a simple cylinder, there must be 4 cylinders in this decomposition.    
+2.2. Space of prototypes. The surfaces in ΩED (6) admit two types of decomposition into four cylin-
+ders, which will be called Model A, and Model B. The Model A is characterized by the presence of
+simple cylinders, while the Model B is characterized by the presence of strictly semi-simple cylinders
+(see Figure 1).
+   The next proposition is analogous to [LN14, Prop 4.2, 4.5].
+Proposition 2.2. Let (X, ω) ∈ ΩED (6) be a Prym eigenform which admits a cylinder decomposition
+with 4-cylinders, equipped with the symplectic basis presented in Figure 1. Then up to the action
+GL+ (2, R) and Dehn twists there exists (w, h,t, e) ∈ Z4 such that
+                                              
+                                              
+                                               w > 0, h > 0, 0 ≤ t < gcd(w, h),
+                                               gcd(w, h,t, e) = 1,
+    (1) the tuple (w, h,t, e) satisfies (PD )   D = e2 + 4wh,
+                                              
+                                                            √
+                                                0 < λ := e+2 D < w and λ 6= w/2
+                                              
+                                                                                                e 0 w t 
+    (2) There exists a generator T of OD whose the matrix, in the basis {α1 , β1 , α2 , β2 }, is h0 −t
+                                                                                                    e 0 h .
+                                                                                                       0 0
+                                                                                                0 w 0 0
+    (3) T ∗ (ω) = λω,
+    (4) In these coordinates
+                      ω(Zα2,1 + Zβ2,1 ) = ω(Zα2,2 + Zβ2,2 ) = Z( w2 , 0) + Z( 2t , h2 )
+                   
+
+                      ω(Zα1,1 + Zβ1,1 ) = ω(Zα1,2 + Zβ1,2 ) = λ2 · Z2
+Conversely, let (X, ω) ∈ H (6) having a four-cylinder decomposition. Assume there exists (w, h,t, e) ∈
+Z4 satisfying (PD ), such that after normalizing by GL+ (2, R), all the conditions in (4) are fulfilled.
+Then (X, ω) ∈ ΩED (6).
+
+
+                                                                                 λ/2
+                                   β1,1                                                   λ/2
+                           α1,1                        β2,1                t/2
+                                                                                  w/2
+                                               α2,1                  h/2
+                 β2,2
+                                   α2,2
+
+                                   β1,2
+                           α1,2
+
+
+
+        F IGURE 1. Basis {αi, j , βi, j }i, j=1,2 of H1 (X, Z) associated with cylinder decomposi-
+        tions of Model (left) A and Model B (right). For i = 1, 2, setting αi := αi,1 + αi,2 and
+        βi := βi,1 + βi,2 , then {α1 , β1 , α2 , β2 } is a symplectic basis of H1 (X, Z)− .
+                                        PRYM EIGENFORMS IN GENUS FOUR                                     5
+
+
+
+Proof of Proposition 2.2. The proof follows the same lines as the proof of [LN14, Prop. 4.5]. The
+only difference is in the intersection
+                                          form on H1 (X, Z)− . In this case, the intersection form (in the
+                               2J 0
+basis {α1 , β1 , α2 , β2 }) is 0 2J . All the computations are straightforward.                          
+Remark 2.3. The decomposition is of Model A if and only if
+                                λ < w/2 ⇐⇒ 2(e + 2h) < w ⇐⇒ (e + 4h)2 < D,
+and of Model B if and only if
+               w/2 < λ < w ⇐⇒ e + h < w < 2(e + 2h) ⇐⇒ (e + 2h)2 < D < (e + 4h)2
+  For any discriminant D, we denote by PD the set of (w, h,t, e) ∈ Z4 satisfying (PD ). Elements of
+PD are called prototypes. We also denote by PDA , PDB the set of prototypes of Model A and B, that is
+                                       PDA := {(w, h,t, e) ∈ PD , λ < w/2}.
+                              PDB := {(w, h,t, e) ∈ PD , w/2 < λ < w}.
+The surface constructed from a prototype (w, h,t, e) ∈ PD will be denoted by XD (w, h,t, e).
+2.3. Prototypes of model A. We show that for any discriminant D 6= 5, any surface in ΩED (6) admits
+a decomposition in Model A (compare with [LN14, Prop. 4.7]).
+Proposition 2.4. Let (X, ω) ∈ ΩED (6) that does not admit any decomposition in model A. Then, up
+to the action of GL+ (2, R), (X, ω) is the surface presented in Figure 2 (on the right). In particular,
+the order OD is isomorphic to Z[x]/(x2 + x − 1) and D = 5.
+Proof of Proposition 2.4. Since (X, ω) is a Veech surface, we can assume that (X, ω) is horizontally
+periodic. By assumption, the cylinder decomposition in the horizontal direction is in Model B. Using
+GL+ (2, R)-action, we can normalize (X, ω) the larger cylinders are represented by two unit squares.
+Let 0 < x < 1, 0 < y, 0 ≤ t < x be the width, height, and twist of the smaller ones (see Figure 2).
+                                                                      √
+                                                                  −1+ 5
+                t       x                                           2
+
+                                                              √
+           y                                              −1+ 5
+                                                            2
+
+
+
+           1                                                  1
+
+
+               2x − 1       1                                             1
+
+
+
+
+                    F IGURE 2. Model B: cylinders in directions v1 , v2 (left), and v3 (right).
+
+We first show t = 0 mod x. Assume t > 0. There exists a cylinder in direction v1 = y+1
+                                                                                    t . Since t > 0
+this cylinder is not simple only when
+                        1      y+1
+(1)                          =      ,  or equivalently      t = (1 − x)(1 + y).
+                       1−x       t
+6                                    ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+Now, t − (1 − x) = (1 − x)y > 0 implies that there exists a cylinder in direction v2 = 1+y
+                                                                                       x−t . This cylinder
+is not simple only when v2 is the vertical direction, which implies t = x.
+Since t = 0 mod x, condition (1) reads
+                                              x
+                            1+y =            1−x ,         y    2x − 1     1
+                                             2x−1     ⇒       =        = 2− .
+                              y     =         1−x .       y+1      x       x
+                 y
+It follows that y+1 < x. Hence there exists a cylinder in direction v3 = −(y + 1). This cylinder is not
+simple only if
+                                y      2x − 1
+                                    =          = 1 − x ⇒ x2 + x − 1 = 0
+                              y+1         x
+                                               √
+Solving above equation gives x = y = −1+2 5 proving the proposition.                                           
+
+2.4. Butterfly moves. Let (X, ω) := XD (w, h,t, e) be a prototypical surface in ΩED (6) associated to
+a prototype (w, h,t, e) ∈ PDA . We denote horizontal cylinders of X by Ci, j , i, j ∈ {1, 2}, where Ci,1 and
+Ci,2 are exchanged by the Prym involution, and C1, j is a simple cylinder.
+   Let C10 (resp. C20 ) be a simple cylinder contained in the closure of C2,1 (resp. in the closure of C2,2 )
+such that C10 and C20 are exchanged by the Prym involution τ. Note that C10 and C20 are disjoint from
+C1,1 ∪C1,2 .
+   Let α01, j be the element in H1 (X, Z) represented by the core curves of C0j , the orientation of the core
+curves are chosen such that τ(α01,1 ) = −α01,2 .
+   We can write α01, j = pα2, j + qβ2, j ∈ H1 (X, Z), with p ∈ Z, q ∈ Z \ {0} such that gcd(p, q) = 1.
+Moreover, we can choose the orientation of α01, j such that q > 0. The following lemma gives a
+necessary and sufficient condition on (p, q) for the existence of C0j . Its proof follows the same lines as
+[LN14, Lem.7.2].
+Lemma 2.5 (Admissibility condition). The simple cylinders C0j , j = 1, 2, exist if and only if
+
+                                     0 < λq < w/2 ⇔ (e + 4qh)2 < D.
+   Since C0j are simple cylinders, the surface X admits a cylinder decomposition of Model A in the
+direction of C0j . Let (w0 , h0 ,t 0 , e0 ) be the prototype in PDA associated to this cylinder decomposition. For
+our purpose, we will give a sketch of proof of the following proposition (which parallels the proof of
+[LN14, Prop.7.5,7.6]).
+Proposition 2.6. Let B = (α1 , β1 , α2 , β2 ) and B 0 = (α01 , β01 , α02 , β02 ) denote the symplectic bases of
+H1− (X, Z) associated to (w, h,t, e) and (w0 , h0 ,t 0 , e0 ) respectively. Then the transitionmatrix M
+                                                                                                        of the
+                                                                                               0210
+                                                                             Id    0
+basis change from B to B 0 satisfies M = M1 ·M2 ·M3 , where M1 ∈ 02 SL(2,Z) , M2 = 01 00 00 12 , M3 ∈
+                                                                                             0100
+   1∗      0
+   01           . As a consequence, the new prototype (w0 , h0 ,t 0 , e0 ) satisfies
+    0   SL(2,Z)
+
+                                           e0 = −e − 4qh,
+                                       
+                                           h0 = gcd(−qh, pw + qt)
+                                                   PRYM EIGENFORMS IN GENUS FOUR                                                          7
+
+
+                                                                                                                       α12
+
+                                                                                                              β12
+                                                                                                                                    α11
+
+
+                                                                                                              β˜ 011
+                                                                                                                             η011
+                          C12
+
+
+                                                                                                        C10
+                                C10         C21   C10
+                                                                                          α012
+                                                                                                 α011
+
+                   C22                                                              C20
+             C20                C20
+
+
+
+                                      C11
+                                                              η012
+                                                                           β˜ 012
+
+
+                                                        α12
+                                                                           β11
+
+                                                                     α11
+
+
+                       F IGURE 3. Switching periodic directions: symplectic basis change.
+
+
+
+Proof. Let η01,1 , η01,2 be two saddle connections contained in C10 and C20 respectively such that η01,2 =
+−τ(η01,1 ), where τ is the Prym involution (see Figure 3). Set α01 = α01,1 + α01,2 , η01 = η01,1 + η01,2 .
+Step 1: set β˜ 01, j = η01, j − α1,1 − α1,2 ∈ H1 (X, Z) (see Figure 3), and β˜ 01 = β˜ 01,1 + β˜ 01,2 . We have,
+(α01 , β˜ 01 ) = (α2 , β2 ) · ( qp rs ), where ( qp rs ) ∈ SL(2, Z). Therefore, (α1 , β1 , α01 , β˜ 01 ) is a symplectic basis
+                                                                                          Id2      0
+of H1− (X, Z), and (α1 , β1 , α01 , β˜ 01 ) = (α1 , β1 , α2 , β2 ) · M1 , where M1 = 0 ( p r ) .
+                                                                                                 q s
+Step 2: set
+
+                       α̃02, j = α1, j , j = 1, 2             ⇒ α̃02 := α̃02,1 + α̃02,2 = α1
+                   
+
+                       β˜ 2, j = α1,1 + α1,2 + β1, j j = 1, 2 ⇒ β˜ 02 := β˜ 02,1 + β˜ 02,2 = β1 + 2α01 .
+                          0       0        0
+
+
+
+Recall that η01 = η01,1 + η01,2 = β˜ 02 + 2α1 . Thus (α01 , η01 , α̃02 , β˜ 02 ) is a symplectic basis of H1 (X, Z)− , and
+                                                                        0 2 1 0
+(α01 , η01 , α̃02 , β˜ 02 ) = (α1 , β2 , α01 , β˜ 01 ) · M2 , where M2 = 01 00 00 12 .
+                                                                                    0100
+Step 3: the complement of C10 ∪C20 in X is the union of two cylinders C100 and C200 in the same direction.
+Let α02, j be a core curve of C00j , and η02, j a saddle connection in C00j that crosses α02, j once. Set α02 :=
+α02,1 + α02,2 , η02 := η02,1 + η02,2 , then (α02 , η02 ) = (α̃02 , β˜ 02 ) · A, with A ∈ SL(2, Z).
+   We now observe that the symplectic basis B 0 of H1− (X, Z) adapted to the cylinder decomposition
+in the direction of C0j must be (α01 , β01 , α02 , β02 ), where β0i is obtained from η0i by some Dehn twist.
+8                                           ERWAN LANNEAU, DUC-MANH NGUYEN
+
+                                                                                                           
+                                                                                           1∗         0
+Therefore, (α01 , β01 , α02 , β02 ) = (α01 , η01 , α̃02 , β˜ 02 ) · M3 , where M3 ∈        01                  , and the first assertion
+                                                                                            0       SL(2,Z)
+follows.
+   Let T be the generator ofOD associated to the prototype (w, h,t, e). Recall that the matrix of T in
+                                       e 0 w t
+                                    
+the basis B is given by T =            0 e 0 h
+                                       h −t 0 0     . Let T2 and T3 be the matrices of T in the bases (α01 , η01 , α̃02 , β˜ 02 )
+                                       0 w 0 0
+and (α01 , β01 , α02 , β02 ) respectively. A direct computation shows
+                                                                            −2qh 0    a   b
+                                                                                                              !
+                                                                             0 −2qh   c   d
+                              T2 = M2−1 · M1−1 · T · M1 · M2 =               d   −b 2qh+e 0
+                                                                             −c   a   0 2qh+e
+where                                        
+                                             
+                                              a      =     sh,
+                                               b      =     −4qh − rw − st − 2e,
+                                             
+                                             
+                                              c      =     −qh,
+                                               d      =     pw + qt.
+                                             
+Hence
+                                                                     1 −n
+                                                                                  
+                                         −2qh · Id                       · ac db · A
+    T3 = M3−1 · T2 · M3 =                       2                   0 1               , with n ∈ Z, A ∈ SL(2, Z).
+                                    A−1 · −c
+                                          d −b · 1 n
+                                                      
+                                             a     01               (2qh + e) · Id2
+Consider now the generator T 0 associated to the cylinder !
+                                                          decomposition in the direction of C10 . The
+                                                                 e0 0 w0 t 0
+matrix of T 0 in the basis B 0 is given by T 0 =                 0 e0 0 h0       with (w0 , h0 ,t 0 , e0 ) ∈ PDA . Since T and T 0
+                                                                 h0 −t 0 0 0
+                                                                 0 w0 0 0
+are both generators of OD , we must have T 0 = ±T + f Id4 , with f ∈ Z. Comparing the matrices of T
+and T 0 in B 0 , and using the admissibility condition 0 < λq < w/2 ⇔ λ − e − 2qh > 0, we get
+                                0
+                                T = T − (e + 2qh),
+                                  e0 = −e − 4qh,
+                                0
+                                  h = gcd(c, d) = gcd(−qh, pw + qt).
+                                                                                                                                     
+   We will call the operation of passing from the cylinder decomposition in the horizontal direction to
+the cylinder decomposition in the direction of C10 a Butterfly move. If the pair of integers associated
+with the core curve of C10 is (1, q), q ∈ Z \ {0}, we denote the corresponding Butterfly move by Bq . If
+this pair of integer is (0, 1), then the corresponding Butterfly move is denoted by B∞ . Note that the
+Butterfly moves preserve the type of the decomposition, thus they induce transformations on the set
+of prototypes PDA .
+   By the same arguments as [LN14, Lem.7.2] and [LN14, Prop.7.5, Prop.7.6] (see also [Mc05,
+Th.7.2, Th.7.3]), we can prove
+Proposition 2.7. The Butterfly move B∞ is always realizable. For q ∈ N, the Butterfly move Bq is
+realizable on the prototypical surface XD (w, h,t, e) if we have
+                                               w
+                                    0 < λq < ⇔ (e + 4qh)2 < D
+                                               2
+                                           A
+   The actions of the Butterfly moves on PD are given by
+                                        PRYM EIGENFORMS IN GENUS FOUR                                                9
+
+
+
+    (1) If q ∈ N then Bq (w, h,t, e) = (w0 , h0 ,t 0 , e0 ) where
+                                        0
+                                         e = −e − 4qh,
+                                         h0 = gcd(qh, w + qt)
+    (2) If q = ∞ then B∞ (w, h,t, e) = (w0 , h0 ,t 0 , e0 ) where
+                                          0
+                                              e = −e − 4h,
+                                              h0 = gcd(t, h)
+   Lemma 2.1 and Proposition 2.4 imply the following
+Theorem 2.8. Let D be a fixed positive integer. If D 6= 5 then there is an onto map from PDA on the
+components of ΩED (6).
+Let ∼ be the equivalence relation on PDA that is generated by the Butterfly moves Bq , that is p ∼ p0 if
+and only if there is a sequence of Butterfly moves that send p to p0 . Then we have
+                              # {Components of ΩED (6)} ≤ # PDA / ∼ .
+                                                                         
+
+  An equivalence class of the equivalence relation generated by the Butterfly moves will be called a
+component of PDA .
+2.5. Reduced prototypes and almost reduced prototypes. A reduced prototype in PDA is a prototype
+(w, h,t, e) ∈ PDA where h = 1, and t = 0. The set of reduced prototypes of a discriminant D is denoted
+by SD1 .
+   When D ≡ 1 mod 8, we will also use the set
+                               SD2 = {(w, h,t, e) ∈ PDA , h = 2, t = 0, w is even}.
+Elements of SD2 will be called almost-reduced prototypes. We close this section by the following
+Lemma 2.9.
+   (1) If D 6≡ 1 mod 8 then any element of PDA is equivalent to an element of SD1 .
+   (2) If D ≡ 1 mod , then any element of PDA is equivalent to either an element of SD1 or an element
+       of SD2 .
+Proof. Let p0 = (w0 , h0 ,t0 , e0 ) be an element in the equivalence class of p such that h0 is minimal.
+Since the Butterfly move B∞ is always admissible, we must have h0 ≤ gcd(t0 , h0 ). But t0 < h0 , there-
+fore t0 = 0. Applying the Butterfly move B1 (which is always admissible), we get h0 ≤ gcd(h0 , w0 ),
+which implies that h0 | w0 .
+   Let (w00 , h00 ,t00 , e00 ) = B1 (w0 , h0 ,t0 , e0 ). We have h00 = h0 , and e00 = −e0 − 4h0 . It follows that w00 =
+D−(e0 +4h0 )2
+    4h0       = w0 − 2e0 − 4h0 . The same argument as above shows that we must have h0 | w00 , which
+implies h0 | 2e0 .
+   We first consider the case D 6≡ 1 mod 8, which means that d ≡ 0, 4, 5 mod 8. If D is even then
+so is e0 . If h0 is also even then 2 | gcd(w0 , h0 , e0 ), which is impossible since gcd(w0 , h0 , e0 ) = 1
+by the definition of prototype. Thus h0 must be odd. Since h0 | 2e0 , we draw that h0 | e0 . Hence
+h0 = gcd(w0 , h0 , e0 ) = 1, and (w0 , h0 ,t0 , e0 ) ∈ SD1 .
+                                                                          D−e2
+  If D ≡ 5 mod 8, then since e20 ≡ 1 mod 8, we have w0 h0 = 4 0 is odd, which implies that h0 is
+odd. The same argument as above shows that h0 = 1 and (w0 , h0 ,t0 , e0 ) ∈ SD1 .
+10                                  ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+   We now consider the case D ≡ 1 mod 8. If h0 is odd, since h0 | 2e0 , we must have h0 | e0 . Hence
+h0 = gcd(w0 , h0 , e0 ) = 1, and p0 ∈ SD1 . If h0 is even then h0 /2 | e0 , thus h0 /2 = gcd(w0 , h0 , e0 ) = 1.
+Therefore, we have h0 = 2. Since 2|w0 , we have p0 ∈ SD2 .                                                    
+
+                                         3. C OMPONENTS OF PDA
+3.1. Disconnectedness of PDA . .
+   The following lemmas show that PDA have more than one component in general.
+Lemma 3.1. If D ≥ 20 is an even discriminant, that is D ≡ 0 mod 4 then PDA has at least two compo-
+nents.
+Proof. Let p = (w, h,t, e) ∈ PDA be a prototype. Since D − e2 = 4wh, e must be even, that is e ≡
+0, 2 mod 4. Assume that p is mapped by some Butterfly move Bq to another prototype p0 = (w0 , h0 ,t 0 , e0 ).
+Then by Proposition 2.7, we must have e0 ≡ e mod 4. Thus, p1 = ( D−4                       D
+                                                                  4 , 1, 0, −2) and p2 = ( 4 , 1, 0, 0)
+cannot belong to the same equivalence class of ∼.                                                       
+Lemma 3.2. Let D > 9 be a discriminant such that D ≡ 1 mod 8. Let p0 = (w0 , h0 ,t0 , e0 ) be an
+element  of PDA such that w0 ≡ h0 ≡ t0 ≡ 0 mod 2. If the prototype p1 = (w1 , h1 ,t1 , e1 ) ∈ PDA satisfies
+ w1 t1     00
+  0 h1 6≡ 0 0 mod 2, then p1 is not contained in the equivalence class of p0 .
+
+Proof. For any element p = (w, h,t, e) of PDA , let us denote by Tp the generator of OD associated to
+                 Tp in the basis of H1− (X, Z) adapted to the corresponding cylinder decomposition
+p. The matrix of 
+                     e 0 w t
+is given by Tp =     0 e 0 h           (see Proposition 2.2). In particular, the matrix of the generator of OD
+                     h −t 0 0
+                     0 w 0 0
+associated to p0 satisfies Tp0 ≡ Id02 00 mod 2.
+                                              
+
+    Let p0 = (w0 , e0 , h0 ,t 0 ) ∈ PDA be the prototype obtained from p by an admissible Butterfly move
+B(m,n) . We claim that the matrix Tp0 of Tp in the basis of H1− (X, Z) associated with p0 also satisfies
+Tp0 ≡ Id02 00 mod 2. To see this, recall that by Proposition 2.6 the matrix of the basis change induced
+             
+by the Butterfly move is given by M1 · M2 · M3 , where
+                                                        0 2 1 0                       
+                                 
+                                   Id2    0
+                                                                               1∗   0
+                       M1 ∈ 0 SL(2,Z) , M2 = 1 0 0 2 , M3 ∈0 0 0 1              0 1         .
+                                                                             0 SL(2,Z)
+                                                      0100
+Since Tp0 = (M1 · M2 · M3 )−1 · Tp · M1 · M2 · M3 , it is easy to check that Tp0 ≡ Id02 00 mod 2.
+                                                                                          
+
+   Now, assume that p0 can be connected to p1 = (w1 , h1 ,t1 , e1 ) by a sequence of Butterfly moves.
+Let Tp00 be the matrix of Tp0 in the basis adapted to p1 . The previous claim implies that Tp00 ≡
+ Id2 0
+         mod 2. Since Tp00 and Tp1 are both generators of OD , we must have Tp1 = ±Tp00 + f Id4 , with
+       
+  0 0
+f ∈ Z. But this is impossible since the top right 2 × 2 submatrix of Tp1 is equal to w01 ht11 6≡ 0 mod 2,
+                                                                                               
+
+while the same submatrix of ±Tp00 + f Id4 is equal to 0 modulo 2. This contradiction allows us to
+conclude.                                                                                              
+     As a consequence of Lemma 3.2, we get
+Corollary 3.3. If D ≡ 1 mod 8, then an element of SD1 is not equivalent to any element of SD2 .
+  The following theorem shows that essentially, that is for D large enough, PDA does not have other
+components than the ones mentioned in Lemmas 3.1 and 3.2.
+                                       PRYM EIGENFORMS IN GENUS FOUR                                        11
+
+
+
+Theorem 3.4 (Components of PDA ). Let D ≥ 4 be a discriminant. Assume that
+                    D 6∈ Exc1 := {4, 5, 8, 9, 12, 16, 17, 25, 33, 36, 41, 49, 52, 68, 84, 100}
+and
+                           D 6∈ Exc2 := {113, 145, 153, 177, 209, 265, 313, 481}.
+Then the space PDA is non empty and has
+      (1) one component if D ≡ 5 mod 8,
+      (2) two components, {(w, h,t, e) ∈ PDA , e ≡ 0 mod 4} and {(w, h,t, e) ∈ PDA , e ≡ 2 mod 4}, if D ≡
+          0, 4 mod 8,
+      (3) two components PDA1 := {(w, h,t, e) ∈ PDA , (w, h,t) 6≡ (0, 0, 0) mod 2} and PDA2 := {(w, h,t, e) ∈
+          PDA , w ≡ h ≡ t ≡ 0 mod 2}, if D ≡ 1 mod 8.
+For D ∈ Exc1 , we have
+       • If D ∈ {4, 5, 9} then PDA is empty.
+       • if D ∈ {8, 12, 16, 17, 25, 33, 49} then PDA has only one component.
+       • If D ∈ {36, 41, 52, 68, 84, 100}, then PDA has three components.
+For D ∈ Exc2 , PDA has three components and PDA1 is connected.
+   To prove this theorem, we use similar ideas to the proof of [LN14, Th.8.6]. Even though there are
+some new technical difficulties related to the fact that when D ≡ 1 mod 8, PDA has two types of reduced
+prototypes SD1 and SD2 , the same strategy actually allows us to get the desired conclusion. Theorem 3.4
+is proved in details in Appendix A.
+
+                               4. D ETECTING PROTOTYPES USING AREAS
+   For our purpose, it is important to determine the prototype associated with a periodic direction.
+While in principle it is possible to obtain all the parameters of the corresponding prototype, the
+calculations could be quite complicated in practice. However, the following lemma shows that the
+parameter e can be easily computed from the area of a cylinder in the direction under consideration.
+Lemma 4.1. Let (X, ω) ∈ ΩED (6) be a Prym eigenform with a semi-simple cylinder C . Then there is
+g ∈ GL+ (2, R) such that g · (X, ω) = XD (w, h,t, e) and
+                                                              1 λ
+                                       Area(C ) = Area(X, ω) · · √
+                                                              2   D
+If C is simple then (w, h,t, e) ∈ PDA , and if C is strictly semi-simple (w, h,t, e) ∈ PDB . In particular, if
+(X, ω) = XD (w, h,t, e) ∈ ΩED (6) is a Prym eigenform with a non-horizontal semi-simple cylinder C ,
+then there is g ∈ GL+ (2, R) such that g · (X, ω) = XD (w0 , h0 ,t 0 , e0 ), with (w0 , h0 ,t 0 , e0 ) ∈ PD and
+                                                            λ · λ0
+                                               Area(C ) =          .
+                                                              4
+Proof of Lemma 4.1. We only give the proof for the case C is a simple cylinder as the case C is strictly
+semi-simple follows from the same arguments.
+12                                   ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+   Up to the action of SL(2, R) one can assume that C is horizontal. By Proposition 2.2 there is an
+element g = ( ∗0 ∗∗ ) ∈ GL+ (2, R) such that (Y, η) = g · (X, ω) = XD (w, h,t, e). In particular g(C ) is a
+square of dimension 21 λ, thus Area(g(C )) = Area(C ) · det(g) = 41 λ2 . On the other hand
+                            1            1                 λ         λ √
+                Area(Y, η) =  · λ2 + wh = · λ2 + λ2 − eλ = · (2λ − e) = · D
+                            2                2               2         2
+Since Area(Y, η) = det(g) · Area(X, ω), the lemma follows.                                              
+Proposition 4.2. A surface (X, ω) ∈ ΩED (6) is square-tiled if and only if D is a square, that is D = d 2 .
+Moreover if (X, ω) is primitive, made of n squares, then n = 2d.
+Proof. The first assertion is obvious. Let us prove the second one. Since D = d 2 , we have D 6=
+5, and Proposition 2.4 implies that (X, ω) belongs to the GL+ (2, R)-orbit of a prototypical surface
+XD (w, h,t, e), with p = (w, h,t, e) ∈ PDA . By Lemma 2.9 we can suppose that p is either reduced or
+almost-reduced.
+   Let us consider the case p is reduced, that is p = (w, 1, 0, e). Note that XD (w,
+                                                                                    1, 0, e) 
+                                                                                              is not a
+                                                       e+d           d+e d−e         2/λ 0
+primitive square-tiled surface, since we have λ = 2 , while w = 2 · 2 . Let B =                 . Then
+                                                                                      0 2
+(Y, η) = B · XD (w, 1, 0, e) is clearly primitive. A simple computation shows
+                               Area(Y, η) = 2(λ + λ − e) = 2(d + e − e) = 2d.
+which means that (Y, η) is made of 2d squares. Since
+                       Z ⊕ iZ = Λ(B · A · (X, ω)) = B · A · Λ(X, ω) = B · A · Z ⊕ iZ
+the matrix B · A has determinant 1. Hence Area(X, ω) = Area(Y, η) = 2d, that is (X, ω) is also made
+of 2d squares.
+   Assume now that p is almost-reduced, that is p = (w, 2, 0, e), where w is even and e is odd. In
+this case Area(XD (w, 2,0, e))= d e+d
+                                     4 . To get a primitive
+                                                          square-tiled surface, we have to rescale
+                           4                             8
+XD (w, 2, 0, e) either by e+d 0 if e+d
+                                     2 is odd, or by
+                                                        e+d 0  if e+d                               d−e
+                                                                   2 is even (which is equivalent to 2
+                           0 2                           0 1
+is odd). In both cases, the resulting surface consists of exactly 2d squares.                        
+     This proposition allows us to reformulate Lemma 4.1 in the case D is a square as follows
+Corollary 4.3. Let (X, ω) ∈ ΩED (6) be a square-tiled surface with D = d 2 . Let C be a simple cylinder
+on X, and (w, h,t, e) be the prototype associated to the cylinder decomposition in the direction of C .
+Then there is g ∈ GL+ (2, R) such that g · (X, ω) is a primitive square-tiled surface and
+                                                             d +e
+                                         Area(g(C )) = λ =        .
+                                                               2
+                                 5. S WITCHING M ODEL B TO M ODEL A
+  To prove Theorem 1.1, assuming that D > 5, we need to show that the all the prototypical surfaces
+with prototype in PDA belong to the same GL+ (2, R)-orbit. For D even (resp. D ≡ 1 mod 8) and large
+enough, by Theorem 3.4, we know that PDA has two components, which means that we can not connect
+two prototypes in different components by using Butterfly moves. Therefore, we need other moves to
+connect prototypes in PDA . For that purpose, we will make use of prototypes in PDB .
+                                      PRYM EIGENFORMS IN GENUS FOUR                                        13
+
+
+
+    Analogous to the Butterfly moves, we define the Switch moves Si , i ∈ {1, 2, 3, 4}, from decompo-
+sitions of type B to decomposition of type A. They induce transformations on the set of prototypes:
+Si : PDB → PDA . The following proposition gives the admissibility conditions of the Switch moves.
+Proposition 5.1. Let (X, ω) = XD (w, h, 0, e) be a surface with model B, that is (w, h, 0, e) ∈ PDB .
+    (1) If 2h+e−w < 0 then the direction θ1 of slope λ+h       λ on (X, ω) is a periodic direction of Model A
+        with prototype S1 (w, h, 0, e) = (w1 , h1 ,t1 , e1 ) satisfying
+                                            e1 = 3e − 2w + 4h.
+    (2) If w − e − h < λ then the direction θ2 of slope − λ+h       λ on (X, ω) is a periodic direction of
+        Model A with prototype S2 (w, h, 0, e) = (w2 , h2 ,t2 , e2 ) satisfying
+                                            e2 = 3e − 2w + 2h.
+                                                                  2λ + 3h
+    (3) If 3h + 3e/2 − w < 0 then the direction θ3 of slope                  on (X, ω) is a periodic direction
+                                                                       λ
+        of Model A with prototype S3 (w, h, 0, e) = (w3 , h3 ,t3 , e3 ) satisfying
+                                           e3 = 7e + 12h − 4w.
+    (4) If w − e − h < λ/2 then the direction θ4 of slope −2 λ+h      λ on (X, ω) is a periodic direction of
+        Model A with prototype S4 (w, h, 0, e) = (w4 , h4 ,t4 , e4 ) satisfying
+                                            e4 = 5e − 4w + 4h.
+Proof of Proposition 5.1. We first assume 2h + e − w < 0. Clearly, the cylinder C1 in direction θ1 as
+shown in Figure 4 does exist if and only if the quantity y1 = (λ − w/2) · slope(θ1 ) satisfies y1 < λ/2
+(and in this case y1 is the height of C1 ). A straightforward computation gives (recall that wh = λ2 −eλ):
+                λ + h 2λ2 + (2h − w)λ − hw 2λ2 + (2h − w)λ − (λ2 − eλ) λ + (2h + e − w)
+y1 = (λ − w/2) ·     =                            =                                =                  .
+                  λ                2λ                            2λ                           2
+The assumption implies y1 < λ/2, thus there is a simple cylinder C1 and the direction θ1 is of Model A.
+
+                    C1           y1
+                                                                                x2
+                                                                         C2
+                            C1
+                                                                                y2
+                                                                   C2
+
+
+                   λ − w2
+
+
+
+
+        F IGURE 4. Prototypical surface (X, ω) = SD (w, 1, 0, e) ∈ ΩED (6) of model B. Cylin-
+        ders in direction θ1 (left) and θ2 (right) are represented by C1 and C2 respectively.
+
+  Now by Lemma 4.1 we have Area(C1 ) = (λ − w2 )( λ2 + h2 ) = λ·λ 1
+                                                               4 . Since
+                λ · λ1 = (2λ − w)(λ + h) = 2λ2 + 2λh − wλ − wh = λ2 + (2h + e − w)λ
+we draw
+                                           λ1 = λ + 2h + e − w.
+14                                    ERWAN LANNEAU, DUC-MANH NGUYEN
+
+                     √                √
+Substituting 2λ = e + D and 2λ1 = e1 + D we obtain e1 = 4h + 3e − 2w as desired.
+    We now turn to the second assertion.
+                                         As above we claim that the cylinder C2 in direction θ2 exists
+                                      w−λ
+if and only if the quantity x2 = − 2 · slope(θ2 ) satisfies x2 < λ/2 (and in this case y2 = λ/2 − x2
+is the height of C2 ). Again a straightforward computation gives:
+                          (λ − w) (λ + h) λ2 + λh − wλ − λ2 + eλ w − e − h
+                    x2 =                   =                         =       .
+                             2        λ                 2λ              2
+The assumption w − e − h < λ implies x2 < λ/2 and there is a cylinder C2 as desired. Since C2 is a
+simple cylinder, the direction θ2 is of Model A. Now by Lemma 4.1 we have Area(C2 ) = λ2 ( λ2 − x2 ) =
+λ·λ2
+  4 , and
+                                     λ2 = λ − 2x2 = λ − (w − e − h).
+               √                      √
+Since 2λ = e + D and 2λ2 = e2 + D we obtain e2 = 2h + 3e − 2w.
+   For the third move we refer to Figure 5, left. The cylinder C3 exists if and only if y3 < λ/2. On the
+other hand a simple computation gives
+                                       w                  λ        3e
+                              y3 = (λ − ) · slope(θ3 ) = + 3h + − w
+                                       2                  2         2
+By the assumption, we have y3 < 2 , hence C exists. Now by Lemma 4.1 we have Area(C3 ) = (λ −
+                                    λ
+w        λ     h    λ·λ3
+2 ) · (2 2 + 3 2 ) = 4 . Hence
+                   λ · λ3 = (2λ − w) · (2λ + 3h) = 2λ(2λ + 3h) − 2wλ − 3λ2 + 3eλ.
+We draw
+                                    λ3 = λ + 6h − 2w + 3e
+                     √                 √
+Substituting 2λ = e + D and 2λ3 = e3 + D we obtain e3 = 7e + 12h − 4w as desired.
+
+                           C3                                                          x4
+                                           y3                                     C4
+                                 C3                                          C4        y4
+                                           x3
+                                      C3                                C4
+
+
+                        λ − w2
+
+
+
+
+     F IGURE 5. Cylinders in direction θ3 , θ4 : cylinders C3 , C4 correspond to the shaded regions.
+
+   We now turn to the last assertion. Applying the same remark as above, the cylinder C4 as shown
+in Figure 5 exists if and only if x4 < λ/2. On the other hand a simple computation gives x4 = − w−λ
+                                                                                                 2 ·
+slope(θ4 ) = w − e − h. Thus by the assumption, C4 exists and the direction of C4 is of Model A.
+   Now by Lemma 4.1 we have Area(C4 ) = ( λ2 − x4 ) · λ2 = λ·λ 4
+                                                             4 . Hence
+                                                λ
+                                      λ4 = 2 · ( − x4 ).
+                                                2
+                     √                √
+Substituting 2λ = e + D and 2λ4 = e4 + D, we obtain e4 = e − 4x4 = 5e − 4w + 4h as desired.            
+                                           PRYM EIGENFORMS IN GENUS FOUR                                                   15
+
+
+
+                      6. P ROOF OF T HEOREM 1.1 FOR D EVEN AND NOT A SQUARE
+   In this section, we will show
+Theorem 6.1. For any even discriminant D ≥ 8 that is not a square, ΩED (6) is connected.
+   By Theorems 2.8 and 3.4, it is enough to find a surface (X, ω) ∈ ΩED (6), on which there exist two
+periodic directions such that the corresponding cylinder decompositions are both in Model A, and the
+associated prototypes pi = (wi , hi ,ti , ei ), i = 1, 2, satisfy e1 − e2 ≡ 2 mod 4.
+   Our strategy is to look for a prototypical surface (X, ω) = XD (w, h,t, e) ∈ ΩED (6) having two simple
+cylinders C1 , C2 in two different directions, say θ1 and θ2 , for which one has
+                                                                                       √
+                           8                                                       e+ D
+                             (Area(C1 ) − Area(C2 )) 6≡ 0 mod 4, where λ =                   .
+                           λ                                                          2
+Indeed, the corresponding cylinder decompositions associated to θ1 , θ2 are of Model A with proto-
+types (w1 , h1 ,t1 , e1 ) and (w2 , h2 ,t2 , e2 ). By Lemma 4.1 one has Area(C1 ) − Area(C2 ) = λ/8(e1 − e2 ).
+Theorem 3.4 then implies that all the prototypical surfaces of Model A belong to the same GL+ (2, R)-
+orbit. Since any GL+ (2, R)-orbit contains a prototypical surface of Model A (by Proposition 2.4), this
+will prove the theorem.
+   To this end we will use Proposition 5.1. We will find (w, h,t, e) ∈ PDB such that there are i, j ∈
+{1, 2, 3, 4} for which ei −e j ≡ 2 mod 4 where Si (w, h,t, e) = (wi , hi ,ti , ei ) and S j (w, h,t, e) = (w j , h j ,t j , e j ).
+Proof of Theorem 6.1. For D ∈ {8, 12}, the theorem follows from Theorem 2.8 and Theorem 3.4.
+From now on we assume that D ≥ 20 is a non square even discriminant.
+                                                                                 √ D 6∈ {52, 68, 84}.
+   We first assume that D is not an exceptional discriminant in Theorem 3.4, namely
+Since D is not a square, there is a unique natural number e such that e + 2 < D < e + 4 and D ≡
+                                   2                                         √
+e mod 2. Then (w, h,t, e) = ( D−e4   , 1, 0, e) ∈ PD . The condition e + 2 <  D < e + 4 is equivalent to
+w/2 < λ < w thus (w, h,t, e) ∈ PDB . Let (X, ω) := XD (w, 1, 0, e).
+   In view of applying Proposition 5.1 we rewrite the admissibility conditions of S1 , S2 in terms of D:
+                         (e + 2)2 + 4 < D
+                      
+                                                        ⇐⇒ 2h + e − w < 0
+                         (e + 2)2 < D < (e + 4)2 − 4 =⇒ w − e − h < λ
+Since D is an even discriminant satisfying (e + 2)2 < D < (e + 4)2 , one of the following holds:
+First case: (e + 2)2 + 4 < D < (e + 4)2 − 4.
+S1 and S2 are admissible and we have: e1 = 3e − 2w + 4h and e2 = 3e − 2w + 2h. Since h = 1, we
+have that e1 − e2 ≡ 2 mod 4.
+Second case: D = (e + 4)2 − 4.
+                                                     2
+S1 is admissible and e1 = 3e − 2w + 4. Since w = D−e
+                                                  4 = 2e + 3 we draw e1 = −e − 2.
+Now 3h + 3e/2 − w = −e/2 < 0. Hence S3 is also admissible. We obtain e3 = 7e + 12h − 4w ≡
+−e mod 4. Again this gives e1 − e3 ≡ 2 mod 4.
+Third case: D = (e + 2)2 + 4.
+                                                                                                  2
+Since (e + 2)2 < D < (e + 4)2 − 4, the move S2 is admissible, and e2 = 3e − 2w + 2. Since w = D−e
+                                                                                               4 =
+e + 2 we draw e2 = e − 2.
+16                                  ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+Now, w − e − h = 1 < λ/2, hence the move S4 is also admissible and e4 = 5e − 4w + 4h = e − 4. We
+conclude e2 − e4 = 2.
+   It remains to prove the theorem for the three exceptional cases D ∈ {52, 68, 84}. This is discussed
+in detail in Appendix B.2. The proof of Theorem 6.1 is now complete.                                
+
+                       7. P ROOF OF T HEOREM 1.1 FOR D = d 2 , WITH d EVEN
+     We now provide a proof of Theorem 1.1 when D is a square and even.
+Theorem 7.1. For any even discriminant D = d 2 where d ≥ 14, the locus ΩED (6) is connected.
+Proof of Theorem 7.1. We will construct a surface (X, ω) as shown in Figure 6. Observe that X admits
+an involution τ that exchanges the two horizontal cylinders such that τ∗ ω = −ω. Since τ has two fixed
+points, one of which is the unique zero of ω, (X, ω) is a Prym from in H (6).
+   For α ∈ {A, Ā, B, B̄,C, C̄}, let lα denote the length of α. Note that, for α ∈ {A, B,C}, τ exchanges α
+and ᾱ, therefore lα = lᾱ . The heights of the two horizontal cylinders are set to be 1.
+
+                                        A       B        C     B̄       C̄
+                                    C
+                                            C
+                                                                                   Ā
+                                        A
+                                                    C0
+                                                                    C
+
+
+                                                C        B      C̄       B̄        Ā
+
+
+             F IGURE 6. A surface (X, ω) ∈ Prym(6) with two simple cylinders C and C 0 .
+
+    Elementary computation shows that the slope of the cylinder C is lA +2l3B +lC , and C exists if and only
+if the following inequalities hold:
+                                2lB + lC < 2lA               and              lA < lB + 2lC
+or equivalently
+                                                           1
+(2)                                    lA − 2lC < lB < lA − lC .
+                                                           2
+Let us fixed a natural number d. For a given lB ∈ N, we let lC = lB − 1 and lA = d − 2lB − 2lC =
+d − 4lB + 2. Equation (2) is then equivalent to
+                                       1     4           2       5
+(3)                                      d + < lB < d +
+                                       7     7          11      11
+Observe that if there exists lB ∈ N such that (3) holds then lA , lB , lC > 0.
+                                                     2      5
+   If d is sufficiently large, for instance d > 55 ⇒ 11 d + 11 − ( 17 d + 47 ) > 2, then there exists lB ∈ N,
+lB odd, such that (3) holds. For 14 ≤ d ≤ 54, we check that there exists lB odd such that (3) holds if
+d 6∈ {14, 18, 20, 22, 24, 32, 34, 36, 46}.
+                                        PRYM EIGENFORMS IN GENUS FOUR                                              17
+
+
+
+  We first assume that d ≥ 14 and d 6∈ {14, 18, 20, 22, 24, 32, 34, 36, 46}. Then there exist lA , lB , lC ∈ N
+such that
+                                   
+                                        l − 2lC < lB < lA − 21 lC ,
+                                    A
+                                   
+                                   
+                                        lC = lB − 1,
+                                        l  + 2lB + 2lC = d,
+                                    A
+                                   
+                                   
+                                        lB is odd.
+Let (X, ω) be the surface constructed from the parameters lA , lB , lC as above, and h = 1, where h is the
+height of both horizontal cylinders. Since (X, ω) is square-tiled, its Veech group contains hyperbolic
+elements. Thus (X, ω) is a Prym eigenform in ΩED (6), with D being a square (see [Mc06]). Since
+gcd(lB , lC ) = 1 and h = 1, (X, ω) is primitive. A direct computation gives Area(X, ω) = 2d. Thus
+(X, ω) ∈ ΩEd 2 (6) by Proposition 4.2.
+   Now the cylinder C is simple so that by Corollary 4.3 there is g ∈ GL+ (2, R) such that g · (X, ω) =
+Xd 2 (w, h,t, eB ), with (w, h,t, eB ) ∈ PdA2 , and
+                                                                 d + eB
+                                            Area(C ) = 3lB =
+                                                                   2
+On the other hand, the cylinder C 0 is also simple, thus there is g0 such that g0 ·(X, ω) = Xd 2 (w0 , h0 ,t 0 , e0B )
+and
+                                                            d + e0B
+                                         Area(C 0 ) = 2lB =
+                                                                2
+We draw
+                                            eB − e0B = 2lB ≡ 2 mod 4
+since lB is odd. Thus the two components of the set of prototypes in PdA2 are connected. This proves
+Theorem 7.1 for d 6∈ {14, 18, 20, 22, 24, 32, 34, 36, 46} .
+
+  A short argument handles the remaining cases by using specific prototype of model B satisfying
+Proposition 5.1 as follows: observe that for a prototype (w, h, 0, e) ∈ PdB2 , the moves S1 and S2 are
+admissible if and only if
+                                                       e+d
+                                      h < w−e−h <
+                                                         2
+For each exceptional d, we find a find a suitable (w, h, 0, e) ∈ PdB2 where h is odd. This will give
+S1 (w, h, 0, e) = (w1 , h1 ,t1 , e1 ) and S2 (w, h, 0, e) = (w2 , h2 ,t2 , e2 ) with
+
+                                             e1 − e2 = 2h ≡ 2 mod 4
+
+concluding the proof of the theorem. This is done in Table 1 below.                                                
+
+
+                             8. P ROOF OF T HEOREM 1.1 WHEN D ≡ 1 MOD 8
+   In this section we prove Theorem 1.1 for D ≡ 1 mod 8.
+
+Theorem 8.1. For any discriminant D ≡ 1 mod 8, D > 9, ΩED (6) contains a single GL+ (2, R)-orbit.
+18                                   ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+     d (w, h,t, e) ∈ PDB h < w − e − h < (e + d)/2                 d (w, h,t, e) ∈ PDB h < w − e − h < (e + d)/2
+     14     (15,3,0,4)             3<8<9                           32     (28,9,0,4)            9<15<18
+     18     (16,5,0,2)            5<9<10                           34    (45,5,0,16)            5<24<25
+     20    (25,3,0,10)            3<12<15                          36     (35,9,0,6)            9<20<21
+     22     (21,5,0,8)            5<8<15                           46    (35,15,0,4)           15<16<25
+     24     (20,7,0,4)            7<9<14
+
+          TABLE 1. Connecting components of PDA through model B for exceptional discrimi-
+          nants D = d 2 .
+
+
+
+8.1. Connecting PDA1 and PDA2 for generic values of D. Let us introduce some necessary material
+for the proof. For D ≡ 1 mod 8 large enough, we know by Theorem 3.4 that PDA has two components
+PDA1 and PDA2 . Let (X, ω) := XD (w, h, 0, e) be a prototypical surface, where (w, h, 0, e) ∈ PDA2 . To prove
+Theorem 8.1, it is sufficient to find a periodic direction θ with prototype (w0 , h0 ,t 0 , e0 ) ∈ PDA1 . However
+such a direction is rather difficult to exhibit. We will work on the universal cover of (X, ω) to find a
+simple cylinder with associated prototype in PDA1 .
+
+
+                                                   λ + mλ/2                        w/2 − λ
+
+                                                                                     Ee       Q1
+                                                                                              Q
+                                                                                              Q0
+                                                     C4                  r1                        nh/2
+                                                                                     r0
+                                                              P3         P
+                                                                              P4             P5
+
+
+                                                                                                   λ/2
+
+
+                                              P2              C2
+
+                      C3                                                                           h/2
+
+
+                             P1
+
+                                         C4                                                        h/2
+
+
+
+
+                                    C1
+
+
+
+          F IGURE 7. Searching for periodic directions of model A with prototype in PDA1 : the
+          shaded region corresponds to a simple cylinder.
+                                     PRYM EIGENFORMS IN GENUS FOUR                                          19
+
+
+
+   In what follows, we will refer to Figure 7. We denote the ray starting from P1 and passing through
+P2 by r1 . Its direction is θ1 and its slope is
+                                                      h
+                                                k1 = .
+                                                      λ
+This ray eventually exits the cylinder C2 through its top border.
+Lemma 8.2. On the universal cover, there is a horizontal segment P3 P4 representing the top border
+of C2 (P3 , P4 correspond to the unique singularity of X) that intersects r1 . As a vector in R2 , we have
+−−→
+P1 P4 = (λ + m λ2 , 2h + λ2 ), with m = b λh c ∈ N ∪ {0}, where b.c is the integral part function. Note that m
+is the number of times r1 intersects the unique vertical saddle connection in C2 .
+                      −−→
+Proof. We have P1 P4 = (λ + m λ2 , 2h + λ2 ), where m ∈ N ∪ {0} is the number of times r1 intersects the
+unique vertical saddle connection in C2 .
+    Let P be the intersection of r1 and P3 P4 . Comparing the horizontal components of the vectors
+−−→ −→ −−→
+P1 P3 , P1 P, P1 P4 , we have
+                                    λ     h λ λ                 λ           λ
+                           (m + 1) ≤ ( + ) · < (m + 2) ⇔ m ≤ < m + 1.
+                                    2     2 2 h                 2           h
+                                                                                                             
+   The ray from P1 which passes through P4 is denoted r0 . Its direction is θ0 and its slope is
+                                           h/2 + λ/2         h+λ
+                                     k0 =               =           .
+                                           λ + mλ/2        (m + 2)λ
+Since the top of C2 is glued to the bottom of C4 , we draw a copy of C4 above C2 . The ray r1 then
+enters C4 and crosses the left border of the vertical simple cylinder E that is contained in C4 . We
+can represent the universal cover Ẽ of E as an infinite vertical band intersecting this copy of C4 in a
+rectangle representing E. Let Q1 denote the intersection of r1 with the right border of Ẽ. The ray r0
+also crosses Ẽ. We denote its intersection with the right border of Ẽ by Q0 .
+   For i = 1, 2, we define the x-coordinate (resp. y-coordinate) of Qi to be the horizontal (resp. verti-
+                               −−→
+cal) component of the vector P1 Qi . In other words, these are the coordinates of Qi in the plane with
+origin being P1 . An easy computation shows that the y coordinate of Qi is
+                                                        w + mλ
+                                          (Qi )y = ki ·        .
+                                                           2
+The next lemma gives a sufficient condition to ensure the existence of a simple cylinder.
+Lemma 8.3. If there exists n ∈ N such that
+                                                 λ          h
+                                      (Q0 )y <     + (n + 1) < (Q1 )y
+                                                 2          2
+then there is a simple cylinder in direction with slope k = (n+1)h+λ
+                                                              w+mλ .
+
+Proof. The assumption means that the segment Q0 Q1 contains a pre-image Q of the singularity of
+X. Note that the distance from Q to the bottom right vertex of the rectangle representing C4 equals
+nh/2. Let θ be the direction of P1 Q. Then the slope of θ is k = (n+1)h+λ
+                                                                   w+mλ . One can easily check that
+the segment P1 Q represents a saddle connection in M which is a boundary component of a simple
+20                                     ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+cylinder C. The other boundary component of C is represented by a segment in direction θ passing
+through P4 .                                                                                  
+Lemma 8.4. Let (w0 , h0 ,t 0 , e0 ) be the prototype associated to the cylinder decomposition in direction
+θ. Then
+                                        e0 = 3e − 2w + 4h + 2n(m + 2)h.
+Moreover if w ≡ n · m · h mod 4 then (w0 , h0 ,t 0 , e0 ) ∈ PDA1 .
+Proof. Let P be the intersection of P1 Q and P3 P4 . We first compute x = |PP4 |. We have
+      x = (m+ 2) λ2 − ( h2 + λ2 ) · 1k                    
+               λ              (m + 1)λ − e + w + mh
+          =        (m + 2) −                                  (here, we used the fact that λ2 = eλ + wh)
+               2                   (n + 1)h + λ
+               λ λ + e − w + 2h + n(m + 2)h
+          =      ·
+               2          (n + 1)h + λ
+Now, the area of C is
+                                   (n + 1)h + λ λ
+                     Area(C) = x ·                    = · (λ + e − w + 2h + n(m + 2)h).
+                                         2               4
+The first assertion then follows from Lemma 4.1.
+   We now prove the second assertion of the lemma. Recall that (w, h, 0, e) ∈ PDA2 , which means that
+                                             2
+w and h are even. Therefore, 4 | wh = D−e  4 . Since D ≡ 1 mod 8, we have two cases: if D ≡ 1 mod 16
+then e ≡ ±1 mod 8, and if D ≡ 9 mod 16 then e ≡ ±3 mod 8. The assumption then implies that
+                                                                                       02
+e0 ≡ 3e mod 8. An elementary computation shows that in either case 4 - D−e           4 , which means that w
+                                                                                                           0
+                                                           A
+and h0 cannot be both even, hence (w0 , h0 ,t 0 , e0 ) ∈ PD 1 .                                           
+Proposition 8.5. For any D ≡ 1 mod 8 with D > 9 and D 6∈ {17, 25, 33, 41, 49, 65, 73, 105} there exists
+(w, 2, 0, e) ∈ SD2 such that there is a simple cylinder in direction θ with associated prototype in PDA1 .
+     For the proof of Proposition 8.5, we first need the following
+                                                                                             √    √
+Lemma 8.6. Assume that D > 212 , then there exists a prototype (w, 2, 0, e) ∈ SD2 with e ∈ (− D, − D+
+21) such that                      λ
+                                     (b 2 c + 1) − λ2 ≥ 21 , and
+                                     4 | w.
+Proof. Since D ≡ 1 mod 8, we have D ≡ 1, 9 mod 16. For the rest of this prove we will assume that
+D ≡ 1 mod 16, the other case follows from the same argument.                        √        √
+                    √      √
+Step 1: let e0 ∈ (− D, − D + 7) be an integer such that e0 ≡ ±1 mod 8. If e0 +4 D − b e0 +4 D c ≤ 12
+then we choose e1 = e0 . Otherwise, either e1 = e + 2 or e1 = e + 6 satisfies e1 ≡ ±1 mod 8. Note that
+in either case, we have
+                           √           √             √            √
+                      e1 + D      e1 + D        e0 + D       e0 + D         1 1
+                              −b           c=             −b           c− < .
+                          4           4             4            4          2 2
+                           √   √
+Thus there exists e1 ∈ (− D, − D + 13) such that
+                                         √                 √
+                                    e1 + D            e1 + D 1
+                                 (b          c + 1) −           ≥ .
+                                        4                 4        2
+                                      PRYM EIGENFORMS IN GENUS FOUR                                         21
+
+
+                              D−e2
+Step 2: consider now w1 = 8 1 . Note that by assumption, w1 is even. If 4 | w1 , then (w1 , 2, 0, e1 ) is
+                                                           √    √
+the desired prototype. Otherwise, consider e2 = e1 + 8 ∈ (− D, − D + 21). We have
+                                     D − e22 D − (e1 + 8)2
+                             w2 :=          =              = w1 + 2e1 + 8.
+                                       8           8
+Since e1 is odd, we have 4|w2 . Moreover, we also have
+                            √            √             √         √
+                       e2 + D       e2 + D        e1 + D    e1 + D    1
+                                 −b          c=          −b        c≤
+                           4            4             4         4     2
+Therefore, (w2 , 2, 0, e2 ) is the desired prototype.                                                      
+
+Proof of Proposition 8.5. Lemma 8.4 provides us with a sufficient condition to guarantee that the
+prototype of the direction θ belongs to PDA1 . For any fixed D ≡ 1 mod 8, we can use this criterion to
+check Proposition 8.5 for 9 < D ≤ 57√       2 = 3249. Thus assume that D > 572 .
+                          A2
+                                                     √
+   Let (w, 2, 0, e) ∈ PD , with e ∈ (− D, − D + 21) that satisfies the conditions of Lemma 8.6. If
+there is n ∈ N such that
+                                                     λ          h
+                                          (Q0 )y < + (n + 1) < (Q0 )y
+                                                     2          2
+then Lemma 8.3 implies the existence of a simple cylinder and a prototype (w0 , h0 ,t 0 , e0 ) ∈ PDA . By
+Lemma 8.4 (w0 , h0 ,t 0 , e0 ) ∈ PDA1 if w ≡ n · m · h mod 4. Since w ≡ 0 mod 4 it suffices to show that n can
+be chosen even. This is obviously the case if we have
+                                                                   h
+                                      y := (Q1 )y − (Q0 )y > 2 ·     = 2.
+                                                                   2
+By construction, the left hand side of the above inequality is (recall h = 2):
+                w + mλ
+           y =          × (k1 − k0 ),
+                   2                           
+                 w + mλ     h                 λ
+             =           × × (m + 1) −
+                2(m + 2) λ                  h
+                λ − e + mh                 λ
+             =             × (m + 1) −         (here, we used the fact that λ2 = eλ + wh)
+                 2(m + 2)                  h
+            √    √
+Since e ∈ (− D, − D + 21):
+                                    √            √
+                                      D − e 2 D − 21 √
+                          λ−e =             >             > D − 11.
+                                       2            2
+and
+                                                 √
+                                            λ e + D 21
+                                          0< =     <
+                                            h    4   4
+which implies
+                                                      λ
+                                             0 ≤ m = b c ≤ 5.
+                                                      h
+22                                 ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+Since (m + 1) − λh = (b λh c + 1) − λh ≥ 12 by the choice of e, we get
+                                                  √
+                                              1      D − 11 + 2m
+                                      y >       ×
+                                              2     √2(m + 2) !
+                                              1        D − 15
+                                        >       ×              +1
+                                              2     2(m + 2)
+                                                                
+                                              1     57 − 15
+                                        >       ×            + 1 = 2.
+                                              2       2×7
+This completes the proof of the proposition.                                                             
+8.2. Proof of Theorem 8.1.
+Proof. By Lemma 2.1 and Proposition 2.4, we know that every GL+ (2, R)-orbit in ΩED (6) contains
+a prototypical surface XD (w, h,t, e), with p = (w, h,t, e) ∈ PDA .
+   If D 6∈ {17, 25, 33, 41, 49, 65, 73, 105} and D 6∈ Exc2 , then Theorem 3.4 implies that PDA has two
+components PDA1 and PDA2 . It follows from Proposition 8.5 that there is a prototype in PDA2 that is
+equivalent a prototype in PDA1 . Thus the theorem is proved for this case.
+   For D ∈ {17, 25, 33, 49}, SD2 is empty and PD has one component so there is nothing to prove.
+   For D ∈ {41, 65, 73, 105}, and D ∈ Exc2 we can use the prototypes in PDB and the switch moves to
+connect all the components of PDA . Details are given in Appendix B.3.                               
+
+                                 9. P ROOF OF THE MAIN THEOREMS
+9.1. Proof of Theorem 1.1.
+Proof. Let (X, ω) be a translation surface in ΩED (6) for a discriminant D ≥ 4. By Lemma 2.1 and
+Proposition 2.2, the GL+ (2, R)-orbit of (X, ω) contains a prototypical surface associated to some
+prototype p in PD . Since P4 = P9 = ∅, the loci ΩE4 (6) and ΩE9 (6) are empty.
+   If D = 5 then PD = PDB = {(1, 1, 0, −1)}. Thus ΩE5 (6) = GL+ (2, R) · X5 (1, 1, 0, −1).
+   Assume from now on that D 6= 5. Then by Proposition 2.4 we can take that p ∈ PDA .
+      • Case D ≡ 5 mod 8 follows from Theorem 2.8 and Theorem 3.4 (1).
+      • Case D ≡ 1 mod 8 and D > 9 follows from Theorem 8.1.
+      • Case D even and D > 4, by Theorems 6.1 and 7.1 we get the desired conclusion for D 6∈
+        {4, 16, 36, 64, 100, 144}. For the remaining values of D we have
+           . D = 16: in this case P16 A = {(3, 1, 0, −2)}, thus ΩE (6) has one component.
+                                                                    16
+           . D = 36: in this case P36A has two components {(5, 1, 0, −4), (9, 1, 0, 0)} and {(8, 1, 0, −2)}.
+
+             Consider the square-tiled in Theorem 7.1, with (lA , lB , lC ) = (2, 1, 1). This surface has a
+             simple cylinder C1 in the vertical direction of area 2, and another simple cylinder C2 in
+             the direction of slope 53 of area 3. The prototype of the cylinder decomposition in the
+             vertical direction is (8, 1, 0, −2), and the prototype for the decomposition in the direction
+             3
+             5 is (9, 1, 0, 0). Thus ΩE36 (6) has one component.
+           . D = 64: P64  A has two components
+                              (
+                                  A1 = {(w, h,t, e) ∈ P A , e ≡ 0 mod 4},
+                                 P64                        64
+                                  A2 = {(w, h,t, e) ∈ P A , e ≡ 2 mod 4}.
+                                 P64                        64
+                                   PRYM EIGENFORMS IN GENUS FOUR                                           23
+
+
+
+            Consider the square-tiled surface in Theorem 7.1, with (lA , lB , lC ) = (2, 2, 1). This surface
+            has a simple cylinder C1 in the vertical with Area(C1 ) = 2, and a simple cylinder C2 in
+            the direction of slope 27 with Area(C2 ) = 3. The prototype of the cylinder decomposition
+            in the vertical direction is (·, ·, ·, −4) ∈ P64A1 , while the prototype of the decomposition in
+                                                      A2
+            the direction of C2 is (·, ·, ·, −2) ∈ P64   . Thus ΩE64 (6) has only one component.
+                         A
+          . D = 100: P100 has three components
+                      
+                            A1                            A , e ∈ {−8, −4, 0, 4}}
+                       P100
+                                = {(w, h,t, e) ∈ P100
+                            A 2
+                         P100    = {(16, 1, 0, −6), (12, 2, 1, −2), (14, 1, 0, 2)}
+                       P A3 = {(8, 2, 1, −6), (24, 1, 0, −2)}.
+                      
+                           100
+
+            Let (X, ω) be the primitive square-tiled surface associated with the prototype (24, 1, 0, −2) ∈
+              A3 . By considering the cylinder decomposition in the direction of slope 1 , we see that
+            P100                                                                                  2
+            GL+ (2, R) · (X, ω) contains the square-tiled surface (X 0 , ω0 ) constructed in Theorem 7.1
+            with (lA , lB , lC ) = (4, 1, 2). We observe that (X 0 , ω0 ) has a simple cylinder in direction
+            of slope 38 of area 3. The prototype of the corresponding cylinder decomposition is
+            (·, ·, ·, −4) ∈ P100A1 . Thus the surfaces associated with prototypes in P A1 and P A3 belong
+                                                                                          100        100
+            to the same GL+ (2, R)-orbit.
+            Consider now the square-tiled surface in Theorem 7.1, with (lA , lB , lC ) = (2, 3, 1). This
+            surface has a simple cylinder C1 in the direction of slope −2 with Area(C1 ) = 6, and a
+            simple cylinder C2 in the direction of slope 29 with Area(C2 ) = 5. The prototype of the
+            cylinder decomposition in the direction of C1 is (14, 1, 0, 2) ∈ P100   A2 , and the prototype of
+
+            the decomposition in the direction of C2 is (25, 1, 0, 0) ∈ P100  A1 . Thus ΩE
+                                                                                             100 (6) consists of
+            a single GL+ (2, R)-orbit.
+          . D = 144: we have P144       A has two components
+
+                              (
+                                    A1
+                                  P144                      A , e ≡ 0 mod 4},
+                                          = {(w, h,t, e) ∈ P144
+                                    A 2                     A , e ≡ 2 mod 4}.
+                                  P144    = {(w, h,t, e) ∈ P144
+
+           Consider the square-tiled surface in Theorem 7.1, with (lA , lB , lC ) = (2, 4, 1). This sur-
+           face has a simple cylinder C1 in the vertical direction with Area(C1 ) = 2, and a simple
+                                                  2
+           cylinder C2 in the direction of slope 11 with Area(C2 ) = 7. The prototype of the cylin-
+                                                                          A1 , and the prototype of the
+           der decomposition in the direction of C1 is (·, ·, ·, −8) ∈ P144
+                                                                     A2 . Thus ΩE
+           decomposition in the direction of C2 is (27, 1, 0, 6) ∈ P144             144 (6) consists of a
+                      +
+           single GL (2, R)-orbit.
+       The proof of the theorem is now complete.
+                                                                                                          
+
+9.2. Proof of Theorem 1.2.
+
+Proof. Theorem 1.2 is a direct consequence of Theorem 1.1 and Proposition 4.2.                            
+24                                   ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+                                 A PPENDIX A. P ROOF OF T HEOREM 3.4
+A.1. Spaces of reduced prototypes and almost-reduced prototypes. The proof of Theorem 3.4
+uses the reduced prototypes and almost reduced prototypes defined in Section 2.5. It will be convenient
+to parametrize the set of reduced prototypes of discriminant D by
+                         SD1 = e ∈ Z : e2 ≡ D mod 4 and e2 , (e + 4)2 < D .
+                               
+
+Similarly, when D ≡ 1 mod 8, we will use the set
+                          SD2 = {e ∈ Z, e2 ≡ D mod 16, e2 , and (e + 8)2 < D}.
+to parametrize the set of almost-reduced prototypes. For h = 1, 2, each element e ∈ SDh gives rise to a
+prototype [e] := (w, h, 0, e) ∈ PDA , where w := (D − e2 )/4h.
+   Recall that by Lemma 2.9, every component of PDA contains an element of SDh . As a consequence
+of Proposition 2.6, we have
+Lemma A.1. Let (w, 2, 0, e) be a prototype in SD2 . Let q be a positive integer such that gcd(w/2, q) = 1,
+or q = ∞. If the Butterfly move Bq is admissible then Bq (w, 2, 0, e) ∈ SD2 .
+Proof. Let (w0 , h0 ,t 0 , e0 ) = Bq (w, 2, 0, e). We first claim that h0 = 2. Indeed, from Proposition 2.6,
+we know that h0 = gcd(2q, w) if q ∈ N, or h0 = gcd(2, 0) = 2 if q = ∞. In the former case, since
+gcd(q, w/2) = 1 and w is even we also have h0 = 2.
+   We now claim that both w0 and t 0 is even. To see that, observe that the matrix ac db in the proof of
+                                                                                             
+                                                                             0 0 
+Proposition 2.6 satisfies a ≡ b ≡ c ≡ d ≡ 0 mod 2. Since we have w0 ht 0 = 10 −n
+                                                                                          a b
+                                                                                       1 · c d · A the claim
+follows. Now, since t 0 < gcd(w0 , h0 ) = 2, we must have t 0 = 0, which means that (w0 , h0 ,t 0 , e0 ) ∈ SD2 . 
+A.2. Connected components of SDh . We equip SDh with the relation e ∼ e0 if [e0 ] = Bq ([e]), for some
+q ∈ N∪{∞} if (e+4qh)2 < D. Note that this condition implies that e0 = −e−4qh, and gcd(w, qh) = h,
+when q ∈ N \ {0}, and e0 = −e − 4h, when q = ∞. An equivalence class of the equivalence relation
+generated by this relation is called a component of SDh .
+Theorem A.2 (Components of SDh ). Let D ≥ 12 be a discriminant. Let us assume that
+                                                                                         
+              12, 16, 17, 20, 25, 28, 36, 73, 88, 97, 105, 112, 121, 124, 136, 145, 148, 
+        D 6∈   169, 172, 184, 193, 196, 201, 217, 220, 241, 244, 265, 268, 292, 304,        .
+               316, 364, 385, 436, 484, 556, 604, 676, 796, 844, 1684
+                                                                                         
+
+Then the set SD1 is non empty and has either
+     • three components, {e ∈ SD1 , e ≡ 0 or 4 mod 8}, {e ∈ SD1 , e ≡ 2 mod 8} and
+       {e ∈ SD1 , e ≡ −2 mod 8}, if D ≡ 4 mod 8,
+     • two components,
+          – {e ∈ SD1 , e ≡ 1 or 3 mod 8} and {e ∈ SD1 , e ≡ −1 or − 3 mod 8} if D ≡ 1 mod 8,
+          – {e ∈ SD1 , e ≡ 0 or 4 mod 8} and {e ∈ SD1 , e ≡ +2 or − 2 mod 8} if D ≡ 0 mod 8,
+     • only one component, otherwise.
+Let D ≥ 12 be a discriminant with D ≡ 1 mod 8. If
+     D 6∈ {17, 25, 33, 49, 113, 145, 153, 177, 209, 217, 265, 273, 313, 321, 361, 385, 417, 481, 513}
+then the set SD2 is non empty and connected.
+                                        PRYM EIGENFORMS IN GENUS FOUR                                               25
+
+
+
+   We follows the same strategy as the proof of [LN14, Th. 8.6]. For the sake of completeness, we
+review the arguments here (that are slightly different), and we do not wish to claim any originality in
+this part.
+A.3. Exceptional cases. Our number-theoretic analysis of the connectedness of SDh only applies
+when D is sufficiently large (e.g. D ≥ (83h)2 ). On one hand it is feasible to compute the number
+of components of SDh when D is reasonably small. This reveals the exceptional cases of Theorem A.2.
+On the other hand, using computer assistance, one can easily prove the following
+Lemma A.3. Theorem A.2 is true for all D ≤ (83h)2 .
+A.4. Small values of q. Surprisingly it is possible to show that Theorem A.2 holds for most values
+of D only by using butterfly moves Bq with small q, namely q ∈ {1, 2, 3, 5, 7}. If q is a prime number,
+we will use the following two operations
+                             
+                               Fq (e) = e + 4h(q − 1) = B∞ Bq ([e]),
+                               F−q (e) = e − 4h(q − 1) = Bq B∞ ([e]).
+   These two maps are useful to us, since we have
+Proposition A.4. Let e ∈ SDh , and assume that q is an odd prime.
+   (1) If Fq (e) ∈ SDh and D 6≡ e2 mod q then e ∼ Fq (e).
+   (2) If F−q (e) ∈ SDh and D 6≡ (e + 4h)2 mod q then e ∼ F−q (e).
+Proof. It suffices to remark that [Fq (e)] (resp. [F−q (e)]) is obtained from [e] by the sequence of but-
+terfly moves (Bq , B∞ ) (resp. (B∞ , Bq )), and the respective conditions ensure the admissibility of the
+corresponding sequence (and gcd(w, qh) = h since w is even if h = 2).                                  
+The next proposition guarantees that, under some rather mild assumptions, one has e ∼ F3 (e) = e+8h.
+Proposition A.5. Let e ∈ SDh and let us assume that e − 24h and e + 32h also belong to SDh . Then one
+of the following two holds:
+     (1) e ∼ e + 8h, or
+     (2) (D, e) is congruent to (4h2 , −10h) or (4h2 , −2h) modulo 105 = 3 · 5 · 7.
+Proof. We say that a sequence of integers (q1 , q2 , . . . , qn ) is a strategy for (D, e) if for any i = 1, . . . , n−
+1 the following holds:
+                 
+                     e = e,
+                  1
+                 
+                 
+                     qi is admissible for (D, ei ),
+                 
+                    ei+1 = Fqi (ei ) ∈ e + {−24h, −16h, −8h, 0, 8h, 16h, 24h, 32h},
+                     en = e + 8h.
+                 
+
+For instance, if (D, e) ≡ (0, 3) mod 105 then (5, −3) is a strategy. Indeed letting e = 3 we see that
+3 ∼ F5 (3) = 19 since 5 is admissible for (D, 3). And 19 ∼ F−3 (19) = 11 = 3+8 since −3 is admissible
+for (D, 19). Hence 3 ∼ 3 + 8.
+  Thus in order to prove the proposition we only need to give a strategy for every pair (D, e) mod 105
+with the two exceptions stated in the theorem. In fact each of the 1052 − 2 cases can be handled by
+one of the following 12 strategies.
+26                                  ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+      (1) There are 7350 pairs (D, e) for which q = 3 is admissible (i.e. D 6≡ e2 mod 3). Since F3 (e) =
+          e + 8h the sequence (3) is a strategy for all of these cases.
+      (2) Among the 1052 − 2 − 7350 = 3673 remaining pairs, there are 1960 pairs (D, e) for which the
+          sequence (5, −3) is a common strategy.
+      (3) We can continue searching strategies for all remaining pairs (D, e) but two: (4h2 , −10h) and
+          (4h2 , −2h). We found the following strategies:
+                        (7, −5), (−3, 5), (−5, 7),
+                        (5, 3, −5), (−5, 3, 5), (5, 5, −7), (−7, 5, 5), (−3, 7, −3),
+                        (−5, 3, 7, −3), (−3, 7, 3, −5).
+Note that the condition that e − 24h and e + 32h belong to SDh guarantees the admissibility of the
+strategies. This completes the proof of the proposition.                                        
+Remark A.6. Since for (D, e) ≡ (4h2 , −2h) mod 105 one has D ≡ e2 ≡ (e + 4h)2 mod 105, even
+though one can enlarge the set of primes to be used in the strategies, there is no hope to get a similar
+conclusion to Proposition A.5 without the second case.
+Remark A.7. A simple criterion to be not close to the ends of SDh is the following.
+                                                            √
+              If f ∈ SDh then for any e > f ,    (e + 36h < D) =⇒ (e + 32h ∈ SDh ).
+Indeed, e + 32h ∈ SDh if and only if (e + 32h)2 < D and (e + 32h + 4h)2 = (e + 36h)2 < D. Thus the
+claim is obvious if e + 32h ≥ 0. Now, if e < −32h, then since e > f the inequalities
+        0 > e + 32h > f + 32h > f        and        − ( f + 4h) > 4h > e + 36h > f + 36h > f + 4h
+implies
+                     (e + 32h)2 < f 2 < D        and      (e + 36h)2 < ( f + 4h)2 < D.
+     Let us define TDh = {e ∈ SDh , e − 24h and e + 32h ∈ SDh }. Simple calculations show
+Lemma A.8. Assume that D > (36h)2 . Then if e ∈ TDh and e ≥ −2h, then −e − 4h ∈ TDh .
+     The next proposition asserts that if D is large then assumption of Proposition A.5 actually holds.
+Proposition A.9. Assume that D ≥ (55h)2 if h = 1 and D ≥ (63h)2 if h = 2. Then every element of
+SDh is equivalent to an element of TDh .
+Proof of Proposition A.9. Let f ∈ SDh . Since f ∼ − f − 4h we can assume f ≤ −2h. If f > −6h then
+the proposition is clearly true, therefore we only have to consider the case f ≤ −6h. Observe that
+if f ≤ −6h then ( f + 32h)2 ≤ ( f − 20h)2 and ( f + 36h)2 ≤ ( f − 24h)2 . In particular f − 24h ∈ SDh
+implies f + 32h ∈ SDh . On the other hand, since f < 0, f − 24h 6∈ SDh if and only if D ≤ ( f − 24h)2 .
+Thus assume that
+(4)                                         f 2 < D ≤ ( f − 24h)2 .
+                                                                               √
+We will show that there always exists e ∈ SDh , e ∼ f with e > f and e + 36h < D, which implies that
+e + 32h ∈ SDh by Remark A.7. If e − 24h 6∈ SDh then by definition, e satisfies the inequalities (4) and
+thus we can repeat the argument by replacing f by e.
+  If h = 1 then D ≥ 552 and we have f ≤ 24 − 55 = −31. If h = 2 then D > (62h)2 and we have
+f < 24h − 62h = −38h = −76.
+                                      PRYM EIGENFORMS IN GENUS FOUR                                        27
+
+
+
+  If h = 1, assume that there exists prime q ≤ 13 such that gcd(w, q) = 1. Then f ∼ Fq ( f ) > f and
+                                                                               √
+                Fq ( f ) + 36 = f + 4(q − 1) + 36 ≤ −31 + 48 + 36 = 53 < 55 ≤ D.
+Hence e = Fq ( f ) is convenient if h = 1. Thus we may assume that w is divisible by all primes p ≤ 13.
+Thus D ≥ 4 · w ≥ 4 · 2 · 3 · 5 · 7 · 11 · 13 > 105 .
+  The same applies if h = 2: assume that there exists some odd prime q ≤ 17 such that gcd(w, 2q) = 2.
+Then f ∼ Fq ( f ) > f and
+                                                                                       √
+          Fq ( f ) + 36h = f + 4h(q − 1) + 36h ≤ −38h + 64h + 36h = 62h < 63h ≤ D.
+Hence e = Fq ( f ) is convenient if h = 2. Thus we may assume that w is divisible by all odd primes
+p ≤ 17. Thus (recall that w is even if h = 2): D ≥ 4 · w ≥ 4 · 2 · 3 · 5 · 7 · 11 · 13 · 17 > 106 . By [Mc05,
+Theorem 9.1] there is an integer q relatively prime to w such that
+                                                 3 log(w)
+                                       1<q<               ≤ 5 log(D).
+                                                  log(2)
+Now f ∼ Fq ( f ) where
+                            f < Fq ( f ) = f + 4h(q − 1) < 20h · log(D).
+Since for D ≥ 10 if h = 1 and D ≥ 106 if h = 2, we have
+                5
+                                                                          √
+                                  Fq ( f ) + 36h < 20h · log(D) + 36h <    D.
+This completes the proof of Proposition A.9.                                                              
+A.5. Case D ≡ 4h2 mod 105. Proposition A.5 implies that if D 6≡ 4h2 mod 105 then e ∈ TDh ⇒ e ∼
+e + 8h. We now handle the case D ≡ 4h2 mod 105.
+   We define
+                               UDh = {e ∈ TDh , e 6≡ −2h mod 105},
+Lemma A.10. Assuming D ≡ 4h2 mod 105. For D > (83h)2 = 6889 · h2 , all elements of SDh are
+equivalent to an element of UDh .
+Proof. Let e ∈ SDh . Since D > (83h)2 , Proposition A.9 implies that one can assume e ∈ TDh . Let us
+assume e 6∈ UDh , i.e. e ≡ −2h mod 105. By Lemma A.8, one can assume e ≤ −2h. To prove the
+lemma, we need the following
+                              2
+Lemma A.11. Let w = D−e                  2        2                   h
+                       4h . For D > (83h) , D ≡ 4h mod 105, and e ∈ TD , e ≤ −2h, there exists
+q ∈ N such that                                                    √
+                  q 6≡ 1 mod 105, gcd(w, q) = 1, and 4qh + 31h < D.
+   Let us first complete the proof of Lemma A.10. According to Lemma A.11, we can pick some
+q ∈ N such that
+                                                                                              √
+      gcd(w, q) = 1 and Fq (e) + 36h = e + 4h(q − 1) + 36h = e + 4qh + 32h ≤ 4qh + 30h < D
+                                                          √
+Thanks to Remark A.7, we know that Fq (e) + 36h < D implies Fq (e) + 32h ∈ SDh . Since e ∈ TDh , it
+follows that Fq (e) ∈ TDh . Since Fq (e) − e ≡ 4h(q − 1) 6≡ 0 mod 105, we have Fq (e) 6≡ −2 mod 105, i.e.
+Fq (e) ∈ UD . We conclude by noting that if h = 2 then gcd(w, q) = 1 implies gcd(w, qh) = 2, which
+implies e ∼ Fq (e). Of course if h = 1 the same conclusion applies. Lemma A.10 is now proved. 
+28                                 ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+     To complete the proof of our statement, it remains to show
+Proof of Lemma A.11. One has to show that there exists q ∈ N such that
+                                    
+                                     gcd(w, q) = 1,
+(5)                                    q 6≡ 1 mod 105,√
+                                       4qh + 31h < D.
+                                    
+
+Since D > (83h)2 the last two conditions of (5) are automatic for q = 2, 3, 5, 7, 11, 13. Thus one
+can assume w is divisible by all of these primes,√otherwise
+                                                       √ the lemma is proved. For both values of h,
+we have wh ≥ 2 · 3 · 5 · 7 · 11 · 13 = 30030, thus D = e2 + 4 · w · h > 346.
+   Again, the last two conditions are fulfilled for all primes less than 73 (odd primes if h = 2); thus
+the claim is proven unless w is divisible by all of these 21 primes, in which case we have w > 1028 .
+   To find a good q satisfying the first condition of (5), we will use the Jacobsthal’s function J(n),
+that is defined to be largest gap between consecutive integers relatively prime to n. A convenient
+estimate for J(n) is provided by Kanold: If none of the first k primes divide n, then one has J(n) ≤
+nlog(2)/ log(pk+1 ) , where pk+1 is the (k + 1)th prime.
+  We will also use the following inequality that can be found in [Mc05] (Theorem 9.4):
+For any a, n, w ≥ 1 with gcd(a, n) = 1 there is a positive integer q ≤ nJ(w//n) such that
+                                    q ≡ a mod n and gcd(q, w) = 1,
+where w//n is obtained by removing from w all primes that divide n.
+
+     Applying the above inequality with a = 13 and n = 210, one can find a positive integer q satisfying
+                       q ≤ 210J(w//210),      gcd(w, q) = 1, and q ≡ 13 mod 210.
+In particular q 6≡ 1 mod 105, and thus the first two conditions of (5) are satisfied. Let us see for the
+last condition.
+Since the first prime pk+1 that divide w//210 is 13, Kanold’s estimates gives
+                      J(w//210) ≤ (w//210)log(2)/ log(pk+1 ) ≤ (w//210)1/3 ≤ w1/3 .
+Hence
+                                   4 · qh + 31h ≤ 4 · 210h · w1/3 + 31h.
+But since w > 1028 and D ≥ 4w, we have:
+                                                                     √
+                                  4 · 210h · w1/3 + 31h < w1/2 h ≤    D.
+The lemma is proved.                                                                                  
+Proof of Theorem A.2 when h = 1. We will assume that D ≥ 832 (by Lemma A.3). Thanks to Propo-
+sition A.9, every component of SD1 meets TD1 . Since D = e2 + 4w the possible values of D modulo 8
+are
+                                       D ≡ 0, 1, 4, 5 mod 8.
+We will examine each case separately.
+                                    PRYM EIGENFORMS IN GENUS FOUR                                       29
+
+
+
+  We define
+                   TD1,i = {e ∈ TD1 , e ≡ 2i mod 8} i = 0, 1, 2, 3       if D is even,
+                     1,i          1
+                   TD = {e ∈ TD , e ≡ 1 + 2i mod 8} i = 0, 1, 2, 3       if D is odd.
+We first assume D 6≡ 4 mod 105. By Proposition A.5 we have e ∼ e+8 whenever e is in TD1 . Therefore,
+all elements of TD1,i are equivalent for i = 0, 1, 2, 3. Thus Proposition A.9 implies SD1 has at most four
+components. Now, for each values of D mod 8, we connect the sets TD1,i together.
+     (1) If D ≡ 0 mod 8 then 0 ∈ TD1,0 is connected to B1 (0) = 0 − 4 × 1 = −4 ∈ TD1,2 , and −10 ∈ TD1,3
+         is connected to B2 (−10) = 10 − 4 × 2 = 2 ∈ TD1,1 (observe that w = (D − (−10)2 )/4 is odd
+         so that B2 (−10) ∈ SD1 ).
+     (2) if D ≡ 1 mod 8 then 1 ∈ TD1,0 is connected to B1 (1) = −1 − 4 × 1 = −5 ∈ TD1,1 , and 5 ∈ TD1,2
+         is connected to B1 (5) ∼ −5 − 4 × 1 = −9 ∈ TD1,3 .
+     (3) If D ≡ 4 mod 8 then 0 ∈ TD1,0 is connected to B1 (0) = −4 ∈ TD1,2 .
+     (4) If D ≡ 5 mod 8 then 1 ∈ TD1,0 is connected to B1 (1) = −5 ∈ TD1,1 , and 5 ∈ TD1,2 is connected
+                                                                                                     2
+         to B1 (5) = −9 ∈ TD1,3 . Finally, 1 ∈ TD1,0 is connected to B2 (1, 1) = −9 ∈ TD1,3 since D−1
+                                                                                                   4   is
+         odd.
+    We now assume D ≡ 4 mod 105. Recall that in this case we have defined UD1 := {e ∈ TD1 , e 6≡
+−2 mod 105}. We consider the partition of UD1 by UD1,i = UD1 ∩ TD1,i . It is easy to check that all
+elements of UD1,i are equivalent in SD1 . Indeed we can apply Proposition A.5. Since D ≡ 4 mod 105 and
+e 6≡ −2 mod 105, if we can not conclude directly that e ∼ e + 8 then this means that e ≡ −10 mod 105.
+But in this case, since
+                                            e2 ≡ 0 6≡ D ≡ 1 mod 5
+one can apply the move Fq with q = 5. This gives e ∼ F5 (e) = e + 16. This proves the lemma.
+   Now by Lemma A.10 we only need to connect elements in UD1,i , with different i. Actually, we can
+use the same butterfly moves as above (when D 6≡ 4 mod 105) since they do not involve any element
+e ∈ TD1,i such that e ≡ −2 mod 105. This completes the proof of Theorem A.2 when h = 1.          
+Proof of Theorem A.2 when h = 2. Again we will assume that D ≥ (83 · 2)2 (by Lemma A.3). Thanks
+to Proposition A.9, every component of SD2 meets TD2 . Recall that if e ∈ SD2 then e2 ≡ D mod 16. Set
+                TD2,i = {e ∈ TD2 , e ≡ 1 + 2i mod 16} i = 0, 3, 4, 7   if D ≡ 1 mod 16,
+                TD2,i = {e ∈ TD2 , e ≡ 1 + 2i mod 16} i = 1, 2, 5, 6   if D ≡ 9 mod 16.
+We first assume D 6≡ 4 × 22 = 16 mod 105. By Proposition A.5 we have e ∼ e + 16 whenever e is in
+TD2 . Therefore all elements of TD2,i are equivalent. Thus Proposition A.9 implies SD2 has at most four
+components. Now we connect the elements of TD2,i .
+   If D ≡ 1 mod 16 then
+     (1) 1 ∈ TD2,0 is connected to B1 (1) = −1 − 4 × 2 = −9 ∈ TD2,3 .
+     (2) 9 ∈ TD2,4 is connected to B1 (9) = −9 − 4 × 2 = −17 ∈ TD2,7 .
+                        2          D−92
+     (3) Set w1 = D−116 and w9 = 16 . Since we have w1 − w9 = 5, one of w1 and w9 is odd. If follows
+         that we can apply the Butterfly move B2 to either 1 ∈ TD2,0 or 9 ∈ TD2,4 . In the first case, we
+30                                 ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+          get B2 (1) = −1 − 16 = −17 ∈ TD2,7 and in the second case B2 (9) = −9 − 16 = −25 ∈ TD2,3 .
+          Hence all the sets T 2,i are connected.
+     We now turn to the case D ≡ 9 mod 16.
+      (1) 3 ∈ TD2,1 is connected to B1 (3) = −3 − 4 × 2 = −11 ∈ TD2,2 .
+      (2) 11 ∈ TD2,5 is connected to B1 (11) = −11 − 4 × 2 = −19 ∈ TD2,6 .
+                         2            D−112
+      (3) Set w3 = D−3 16 and w11 = 16 . Since w3 − w11 = 7, one of w3 and w11 is odd. Thus one
+          can apply B2 to either 3 ∈ TD2,1 or 11 ∈ TD2,5 . In the first case we draw B2 (3) = −3 − 16 =
+          −19 ∈ TD2,6 and in the second case B2 (11) = −11 − 16 = −27 ∈ TD2,2 . Hence all the T 2,i are
+          connected.
+   If D ≡ 4 mod 105, we apply the same idea as in the case h = 1. We consider the partition of UD2
+by UD2,i = UD2 ∩ TD2,i . All elements of UD2,i and we can connect elements in UD2,i , with different i. We
+can use the same butterfly moves as above, i.e. when D 6≡ 4 mod 105, since they do not involve any
+element e ∈ TD2,i such that e ≡ −2 · 2 = −4 mod 105. This completes the proof of Theorem A.2 when
+h = 2.                                                                                                   
+
+A.6. Components of PDA : proof of Theorem 3.4. By Theorem A.2, we only need to discuss three
+cases
+           
+            D ≥ 12        and     D ≡ 4 mod 8.
+              D ≥ 17       and     D ≡ 1 mod 8
+              D belongs to the sets of exceptional discriminants of Theorem A.2.
+           
+
+We first examine the generic cases.
+
+A.6.1. Proof of Theorem 3.4 when D ≡ 4 mod 8. Since any element of PDA is equivalent to an ele-
+ment of SD1 if is sufficient to connect the two components {e ∈ SD1 , e ≡ 2 mod 8} and {e ∈ SD1 , e ≡
+−2 mod 8} of SD1 by using non-reduced elements of PDA .
+       • If D = 12 + 16k (with k ≥ 2), then q = 2 is admissible for e = −2 and
+                             2 B                   B
+                                                   ∞                     1 B
+                       [−2] −→ (2k − 3, 2, 0, −6) −→ (2k + 1, 2, 0, −5) −→ [−6]
+
+         connects the two components since −6 ≡ +2 mod 8.
+       • If D = 4 + 32k. One can assume k ≥ 4 since D 6∈ {36, 68, 100}. Hence q = 2 is admissible for
+         e = 2 and
+                           B2                       B
+                                                    2                     1B
+                       [2] −→ (4k − 12, 2, 1, −10) −→ (4k − 4, 2, 1, −6) −→ [−2]
+
+         connects the two components.
+       • If D = 20 + 32k. One can assume k ≥ 3 since D 6∈ {52, 84}. Hence q = 2 is admissible for
+         e = 2 and
+                          B2                       B
+                                                   2                     1B
+                      [2] −→ (4k − 10, 2, 1, −10) −→ (2k − 1, 4, 0, −6) −→ [−10]
+
+          connects the two components since −10 ≡ −2 mod 8.
+                                     PRYM EIGENFORMS IN GENUS FOUR                                    31
+
+
+
+A.6.2. Proof of Theorem 3.4 when D ≡ 1 mod 8. Recall that for h = 1, 2, we have
+        PDAh := {p = (w, h,t, e) ∈ PDA , the equivalence class of p contains an element of SDh }
+and PDA = PDA1 t PDA2 (see Lemma 2.9 and Lemma 3.2).
+  By Theorem A.2 SD1 contains two components {e ∈ SD1 , e ≡ 1, 3 mod 8} and {e ∈ SD1 , e ≡ −1, −3 mod 8}.
+We show that those two components can be connected through PDA1 .
+     • If D = 1 + 16k (with k ≥ 3), then [−5] ∈ SD1 . Thus
+                            B
+                            2                     ∞B                    1 B
+                      [−5] −→ (2k − 1, 2, 0, −3) −→ (2k − 3, 2, 0, −5) −→ [−3]
+       connects the two components since −5 ≡ 3 mod 8.
+     • If D = 9 + 16k (with k ≥ 3 since D 6= 41), then [−7] ∈ SD1 . Thus
+                            B
+                            2                     ∞B                    1 B
+                      [−7] −→ (2k + 1, 2, 0, −1) −→ (2k − 5, 2, 0, −7) −→ [−1]
+        connects the two components since −7 ≡ 1 mod 8.
+Since SD2 contains a single component by Theorem A.2, this proves the theorem for non exceptional
+values of D.
+A.6.3. Proof of Theorem 3.4 for D in the sets of exceptional discriminants of Theorem A.2. The
+strategy is to connect “extra” components of SD1 and SD2 by using moves through PDA .
+   We first prove the statement on the components of PDA , and PDA1 if D ≡ 1 mod 8, for
+                                                                                             
+                  12, 16, 17, 20, 25, 28, 36, 73, 88, 97, 105, 112, 121, 124, 136, 145, 148, 
+            D∈     169, 172, 184, 193, 196, 201, 217, 220, 241, 244, 265, 268, 292, 304,        .
+                   316, 364, 385, 436, 484, 556, 604, 676, 796, 844, 1684
+                                                                                             
+
+For D ∈ {12, 16, 17, 25}, one can check by hand that SD1 has only one component. For D ∈ {20, 28, 36},
+SD1 has two components {−2} and {−4, 0}. So there is nothing to prove.
+                                                                                    1 has three compo-
+   The first non trivial discriminant to discuss is D = 73. We directly check that S73
+nents, namely {−5, 1}, {−7, 3}, {−3, −1}. We can connect them through P73 by  A
+
+                                 B
+                                 3                ∞B               1 B
+                           [−5] −→ (2, 3, 0, −7) −→ (4, 3, 0, −5) −→ [−7]
+                                 B
+                                 2                ∞B               1 B
+                           [−7] −→ (9, 2, 0, −1) −→ (3, 2, 0, −7) −→ [−1]
+(recall that for e ∈ SD1 we define [e] = (w, 1, 0, e) ∈ PDA , where w = (D2 − e2 )/4).
+   The next discriminant to consider is D = 88. This time S88   1 has three components, namely {0, −4}, {−8, 4}, {2, −6, −2}.
+
+We can connect {0, −4} and {−8, 4} through P88       A by
+
+                                           B4               B1
+                                      [−8] −→ (3, 2, 0, −8) −→ [0]
+This proves Theorem 3.4 for D = 88. Using computer assistance, we can repeat the above discussion
+for all the remaining discriminants
+                                                                                                  
+               97, 105, 112, 121, 124, 136, 145, 148, 169, 172, 184, 193, 196, 201, 217, 220, 241,
+       D∈
+               244, 265, 268, 292, 304, 316, 364, 385, 436, 484, 556, 604, 676, 796, 844, 1684
+to show that
+      • PDA has one component when D ≡ 5 mod 8,
+32                                      ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+       • PDA has two components when D ≡ 0 or 4 mod 8,
+       • PDA1 has one component when D ≡ 1 mod 8.
+     We now turn to the statement on PDA2 , for
+       D ∈ {17, 25, 33, 49, 113, 145, 153, 177, 209, 217, 265, 273, 313, 321, 361, 385, 417, 481, 513}
+We check directly that SD2 is empty for D ∈ {17, 25, 33, 49}. The other components are given in the
+table below.
+                      D      components of SD2    D        components of SD2
+                     113        {−7,−1},{1,−9}   313      {3,−11},{−13,−3,5,−5}
+                     145        {−7,−1},{1,−9}   321 {1,−7,−9,9,−1,−17},{−15,7}
+                     153       {3,−11},{−5,−3}   361      {3,−3,−11,−5},{−13,5}
+                     177        {−7,−1},{1,−9}   385 {1,−15,7,−7,−9,−1},{9,−17}
+                     209        {−7,−1},{1,−9}   417 {1,−7,−9,9,−1,−17},{−15,7}
+                     217 {3,−11},{−13,−3,5,−5} 481 {1,−15,7,−7,−9,−1},{9,−17}
+                     265 {3,−3,−11,−5},{−13,5} 513 {1,−7,−9,9,−1,−17},{−15,7}
+                     273 {1,−9},{−15,−7,−1,7}
+                                                                 2 through P A by
+For instance, for D = 217 one can connect the two components of S217        217
+                                 3  B              ∞ B               1    B
+                          [−13] −→ (4, 6, 0, −11) −→ (2, 6, 0, −13) −→ [−11].
+                                                                                                  A2
+(here, for e ∈ SD2 we define [e] = (w, 2, 0, e) ∈ PDA , where w = (D2 − e2 )/8). This shows that P217
+has one component proving Theorem 3.4 for this case. Again, we easily show by using computer
+assistance that PDA2 is non empty and has one component for
+                                   D ∈ {217, 273, 321, 361, 385, 417, 513}
+For the discriminants in Exc2 := {113, 145, 153, 177, 209, 265, 313, 481}, PDA2 actually has two com-
+ponents.
+
+                                 A PPENDIX B. E XCEPTIONAL VALUES OF D
+  In this section, we discuss the particular cases of Theorem 8.1 and Theorem 6.1. To this purpose,
+we will need several tools that we detail in the coming section.
+
+B.1. Tools for exceptional values of D.
+Lemma B.1. Fix a discriminant D which is not a square. Let (X, ω) = XD (w, h, 0, e) be the prototypi-
+cal surface associated with a prototype p = (w, h, 0, e) in either SD1 or SD2 . Then (X, ω) admits a cylin-
+der decomposition in Model B in the direction θ with slope λh (see Figure 8). Let (w0 , h0 ,t 0 , e0 ) ∈ PDB be
+the prototype of the corresponding cylinder decomposition. Then we have
+                                                         2
+       • If (w, h, 0, e) ∈ SD1 , that is h = 1 and w = D−e
+                                                        4 , then
+                                                λ0    λ+n
+(6)                                              0
+                                                   =       ,
+                                                w    λ+n+1
+                                 √
+                                  D−e
+          where n = b wλ c = b     2 c.
+                                     PRYM EIGENFORMS IN GENUS FOUR                                        33
+
+
+                                                          2
+      • If (w, h, 0, e) ∈ SD2 , that is h = 2 and w = D−e
+                                                       8 is even, then
+                                        λ0     2λ + 2(2n + ε)
+(7)                                      0
+                                           =                    ,
+                                        w    2λ + 2(2n + 1 + ε)
+                               √
+                                D−e
+        where n = b wλ c = b     4 c, and
+                                                    if wλ − b wλ c > 12 ,
+                                            
+                                                1
+                                      ε=
+                                                0   if wλ − b wλ c < 12 .
+Remark B.2. If D is a square, (X, ω) may have a two-cylinder decomposition in the direction θ.
+
+
+
+
+         F IGURE 8. Cylinders in direction with slope λh for p ∈ SD1 (left) and p ∈ SD2 (right).
+
+Proof. Since D is not a square, (X, ω) cannot admit a two-cylinder decomposition. Hence the cylinder
+decomposition in the direction θ is either in Model A or Model B. Consider the saddle connection δ0
+in the direction θ which passes through the unique regular fixed point of the Prym involution of X.
+There are exactly two saddle connections in the direction θ with length half of δ0 , namely δ1 , δ2 . If the
+corresponding cylinder decomposition is of Model A, then we must have four such saddle connections.
+Therefore, we can conclude that this decomposition is of Model B.
+   Let p0 = (w0 , h0 , e0 ,t 0 ) be the prototype in PDB of the cylinder decomposition in the direction θ.
+Consider the saddle connection δ whose union with δ1 is a boundary component of a semi-simple
+cylinder in the direction θ. Comparing with the prototypical surface in Proposition 2.2, we get
+                                        w0 − λ0      |δ1 |        (δ1 )y
+                                            0
+                                                =            =              .
+                                           λ      |δ1 | + |δ| (δ1 )y + (δ)y
+where (α)y stands for the y-component of the holonomy vector of the saddle connection α. The
+formulas (6) and (7) then follow from a careful inspection of the number of times δ crosses each
+horizontal cylinder.                                                                          
+  We introduce now some more switch moves to connect a prototype in PDB with other prototypes. In
+what follows, (X, ω) is the prototypical surface corresponding to a prototype p = (w, h,t, e) in PDB .
+Lemma B.3 (S5 move).
+   (1) If t = 0, then (X, ω) admits a cylinder decomposition in Model B in the vertical direction with
+       prototype (w0 , h0 , 0, e0 ), where
+                                            e0 = 3e + 4h − 2w.
+34                                       ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+     (2) If t 6= 0 and λ + e + 2h − w − t > 0, then (X, ω) admits a cylinder decomposition in Model A
+         in the direction of slope h+λ         0 0 0 0
+                                    t . Let (w , h ,t , e ) be the prototype of this cylinder decomposition.
+         Then we have
+                                          e0 = 3e + 4h − 2w − 2t.
+In both cases, we will call the prototype (w0 , h0 ,t 0 , e0 ) the transformation of (w, h,t, e) by the S5 move.
+Lemma B.4 (S6 move). The surface (X, ω) always admits a 4-cylinder decomposition in the direction
+of slope λ+h         0 0 0
+         λ+t . Let (w , h , e ,t) be the prototype of this cylinder decomposition.
+     (1) If w + t − 2h − e > 0, then (w0 , h0 ,t 0 , e0 ) ∈ PDA , and
+                                                   e0 = 3e + 4h − 2w.
+     (2) If w + t − 2h − e < 0, then (w0 , h0 ,t 0 , e0 ) ∈ PDA , and
+                                                       e0 = e + 2t.
+     (3) If w + t − 2h − e = 0, then (w0 , h0 ,t 0 , e0 ) ∈ PDB , and
+                                                       e0 = e + 2t.
+          The prototype (w0 , h0 ,t 0 , e0 ) will be called the transformation of (w, h,t, e) by the S6 move.
+Lemma B.5 (S7 move). Assume that λ > w − h − t. Then (X, ω) admits a 4-cylinder decomposition
+in the direction of slope λ+h         0 0 0 0
+                          w−t . Let (w , h ,t , e ) be the prototype of this cylinder decomposition.
+     (1) If t < e + h then (w0 , h0 ,t 0 , e0 ) ∈ PDA , and
+                                                 e0 = e + 2h − 2w + 2t.
+     (2) If t > e + h then (w0 , h0 ,t 0 , e0 ) ∈ PDA , and
+                                                   e0 = 3e + 4h − 2w.
+     (3) If t = e + h then (w0 , h0 ,t 0 , e0 ) ∈ PDB , and
+                                                   e0 = 3e + 4h − 2w.
+The prototype (w0 , h0 ,t 0 , e0 ) will be called the transformation of (w, h,t, e) by the S7 move.
+
+
+                    C5
+                                                              C6                      C7
+
+
+
+
+                   S5 move                               S6 move                       S7 move
+
+                                      F IGURE 9. The switch moves S5 , S6 , S7
+                                        PRYM EIGENFORMS IN GENUS FOUR                                              35
+
+
+
+B.2. Proof of Theorem 6.1 for D ∈ {52, 68, 84}.
+Proof.
+Case D = 52. The three components of S52              1 are {−6, 2}, {−4, 0} and {−2}. We have [−2] =
+                         1
+(12, 1, 0, −2) ∈ S52 . By Lemma B.1, (X, ω) admits a cylinder decomposition in Model B, with proto-
+                                  0
+type (w0 , h0 ,t 0 , e0 ) where wλ 0 = λ+n+1
+                                        λ+n
+                                              and n = b wλ c = 4. Direct computation shows that (w0 , h0 ,t 0 , e0 ) =
+(3, 4, 0, −2) ∈ P52     B . This connects prototype [−2] to (3, 4, 0, −2). Now the moves S is admissible and
+                                                                                             2
+we have S2 (3, 4, 0, −2) = (9, 1, 0, −4) = [−4]. This connects [−2] and [−4].
+   We have [2] = (12, 1, 0, 2) ∈ S52     1 . By Lemma B.1, (X, ω) admits a cylinder decomposition in Model
+                                                 0
+B, with prototype (w0 , h0 ,t 0 , e0 ) where wλ 0 = λ+n+1
+                                                      λ+n
+                                                              and n = b wλ c = 2. Direct computation shows that
+   0   0  0  0                          B
+(w , h ,t , e ) = (3, 4, 0, −2) ∈ P52 . This connects prototype [2] to (3, 4, 0, −2) as desired.
+Case D = 68. The three components of S68            1 are {−6, 2}, {−4, 0, 4} and {−2}. We have [−2] =
+                         1
+(16, 1, 0, −2) ∈ S68 . By Lemma B.1, (X, ω) admits a cylinder decomposition in Model B, with proto-
+                                  0
+type (w0 , h0 ,t 0 , e0 ) where wλ 0 = λ+n+1
+                                        λ+n
+                                             and n = b wλ c = 5. Direct computation shows that (w0 , h0 ,t 0 , e0 ) =
+(8, 1, 0, 6) ∈ P68   B . This connects prototype [−2] to (8, 1, 0, 6). Now the moves S and S are admissible
+                                                                                       2      4
+and we have S2 (8, 1, 0, 6) = (13, 1, 0, 4) = [4] and S4 (8, 1, 0, 6) = (16, 1, 0, 2) = [2]. This connects the
+three components together as desired.
+Case D = 84. The three components of S84           1 are {−6, 2}, {−8, −4, 0, 4} and {−2}. We have [−2] =
+                         1
+(20, 1, 0, −2) ∈ S84 . By Lemma B.1, (X, ω) admits a cylinder decomposition in Model B, with proto-
+                                  0
+type (w0 , h0 ,t 0 , e0 ) where wλ 0 = λ+n+1
+                                        λ+n
+                                              and n = b wλ c = 5. Direct computation shows that (w0 , h0 ,t 0 , e0 ) =
+                        B
+(4, 5, 0, −2) ∈ P84 . This connects prototype [−2] to (4, 5, 0, −2). Now the moves S2 is admissible and
+we have S2 (4, 5, 0, −2) = (17, 1, 0, −4) = [−4]. This connects [−2] and [4].
+   We have [2] = (20, 1, 0, 2) ∈ S84     1 . By Lemma B.1, (X, ω) admits a cylinder decomposition in Model
+                                                 0
+B, with prototype (w0 , h0 ,t 0 , e0 ) where wλ 0 = λ+n+1
+                                                      λ+n
+                                                              and n = b wλ c = 3. Direct computation shows that
+   0   0  0  0                          B
+(w , h ,t , e ) = (4, 5, 0, −2) ∈ P84 . This connects prototype [2] to (4, 5, 0, −2) as desired.                     
+B.3. Theorem 8.1 for D ∈ {41, 65, 73, 105} and D ∈ Exc2 .
+Proof.
+Case D = 41. We first observe that S41 1 has two components {(4, 1, 0, −5), (10, 1, 0, 1)} and {(8, 1, 0, −3), (10, 1, 0, −1)},
+
+while S412 has only one component {(2, 2, 0, −5), (4, 2, 0, −3)}.
+
+   Set p1 = (10, 1, 0, 1), p2 = (10, 1, 0, −1), p3 = (2, 2, 0, −5). By Proposition 2.4, any GL+ (2, R)-
+orbit in ΩE41 (6) contains a prototypical surface associated to a prototype in P41  A . By Lemma 2.9, any
+               A is equivalent to one of {p , p , p }. Using Lemma B.1, we see that for all i ∈ {1, 2, 3},
+prototype in P41                             1 2 3
+pi is equivalent to either q1 = (2, 4, 0, −3) or q2 = (2, 4, 1, −3). Note that both q1 , q2 are elements of
+  B . But we have the following relations
+P41
+                  (
+                                        B    S5                   B   S3
+                      (2, 4, 0, −3) ∈ P41   −→    (8, 1, 0, 3) ∈ P41 −→     (10, 1, 0, 1)
+                                        B   5   S
+                       (2, 4, 1, −3) ∈ P41 −→            (10, 1, 0, 1).
+                                                    +
+Thus the locus ΩE41 (6) contains a single GL (2, R)-orbit.
+                                        A2
+Case D = 65. One can easily check that P65 contains exactly two prototypes {(2, 2, 0, −7), (8, 2, 0, −1)}.
+                                                   A2
+From Lemma B.1, we see that both prototypes in P65    is equivalent to one prototype in the following
+36                                   ERWAN LANNEAU, DUC-MANH NGUYEN
+
+
+
+family
+                          {(4, 4, 0, −1), (4, 4, 1, −1), (4, 4, 2, −1), (4, 4, 3, −1)}.
+Set qi = (4, 4, i, −1), i = 0, . . . , 3. Note that qi ∈ P65 B for all i. We have the following relations
+
+                                      S2                   A1
+                           
+                           
+                               q0 −→      (·, ·, ·, −3) ∈ P65
+                                      S5                     A1
+                                q1 −→      (14, 1, 0, 3) ∈ P65
+                           
+                                       S6                     A1
+                           
+                           
+                               q2 −→      (14, 1, 0, 3) ∈ P65
+                                      S6                        S2
+                                                              B −→                    A1
+                                q3 −→      (10, 1, 0, 5) ∈ P65       (·, ·, ·, −3) ∈ P65 .
+                           
+
+                             A1
+By Theorem 3.4 we know that P65 contains a single component. Thus the proposition is proved for
+this case.
+                              A2
+Case D = 73. In this case P73    contains exactly two prototypes {(6, 2, 0, −5), (8, 2, 0, −3)}. By
+                                          A2
+Lemma B.1, we see that both elements of P73  are equivalent to a prototype in the family
+                                         {(2, 6, 0, −5), (2, 6, 1, −5)}
+We have the following relations
+                (
+                                       S2
+                                    B −→                   A1
+                   (2, 6, 0, −5) ∈ P73    (·, ·, ·, −7) ∈ P73
+                                          7
+                                       B −→ S                B −→
+                                                                2     S            A1
+                      (2, 6, 1, −5) ∈ P73   (12, 1, 0, 5) ∈ P73   (·, ·, ·, −7) ∈ P73 .
+       A1
+Since P73 has only one component by Theorem 3.4, the proposition is proved for this case.
+                            A2
+Case D = 105. In this case P105 contains exactly two prototypes {(10, 2, 0, −5), (12, 2, 0, −3)}. By
+                              A2
+Lemma B.1, both elements of P73 are equivalent to a prototype in the family
+                                         {(4, 6, 0, −3), (4, 6, 1, −3)}
+We have the following relations
+                           (
+                                               B −→S4                  A1
+                              (4, 6, 0, −3) ∈ P105    (·, ·, ·, −7) ∈ P105
+                                                   B −→6 S                A1
+                                  (4, 6, 1, −3) ∈ P105   (·, ·, ·, −1) ∈ P105 .
+Again, we conclude by Theorem 3.4.
+
+     We finish the proof for
+                           D ∈ Exc2 = {113, 145, 153, 177, 209, 265, 313, 481}.
+
+The strategy is the same: PDA2 contains exactly two components. From Lemma B.1, one sees that both
+components is equivalent to some prototypes in P B . We then use the Switch moves Si for i = 1, . . . , 7
+to connect these prototypes to PDA1 . This last step is easily done by a direct computation. Since by
+Theorem 3.4, PDA1 contains a single component, this finishes the proof of the theorem.                
+                                        PRYM EIGENFORMS IN GENUS FOUR                                               37
+
+
+
+                                                   R EFERENCES
+[HL06]  P. H UBERT and S. L ELIÈVRE , “Prime arithmetic Teichmüller discs in H(2) ”, Isr. J. Math. 151 (2006), 281-321.
+[LN14]  E. L ANNEAU and D.-M. N GUYEN , “Teichmüller curves generated by Weierstrass Prym eigenforms in genus
+        three and genus four ”, J. of Topol. 7 (2014), no. 2, 475–522.
+[Mc05] C. M C M ULLEN, “Teichmüller curves in genus two: Discriminant and spin”, Math. Ann. 333 (2005), pp. 87–130.
+[Mc06]          , “Prym varieties and Teichmüller curves ”, Duke Math. J. 133 (2006), pp. 569–590.
+[Möl14] M. Möller, “Prym covers, theta functions and Kobayashi curves in Hilbert modular surfaces ”, Amer. J. Math. 136
+        (2014), no.4, pp. 995–1021.
+[TZ16] D. T ORRES and J. Z ACHHUBER , “Orbifold Points on Prym-Teichmüller Curves in Genus Three ”, International
+        Mathematics Research Notices (2016).
+[TZ17]          “Orbifold Points on Prym-Teichmüller Curves in Genus Four ”, Journal of the Institute of Mathematics of
+        Jussieu (2017).
+[Zac17] J. Z ACHHUBER, “The Galois Action and a Spin Invariant for Prym-Teichmüller Curves in Genus 3 ”, Bulletin de
+        la SMF to appear.
+
+   UMR CNRS 5582
+U NIV. G RENOBLE A LPES , CNRS, I NSTITUT F OURIER , F-38000 G RENOBLE , F RANCE
+   E-mail address: erwan.lanneau@univ-grenoble-alpes.fr
+
+  UMR CNRS 5251
+IMB B ORDEAUX -U NIVERSITÉ DE B ORDEAUX
+351, C OURS DE LA L IBÉRATION
+33405 TALENCE C EDEX , F RANCE
+  E-mail address: duc-manh.nguyen@math.u-bordeaux.fr
+

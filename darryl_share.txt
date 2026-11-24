@@ -1,1 +1,29 @@
-$file:/workspace/publish_staging/addback/prym-direction-check/darryl_share.txt
+Find and Send Files to Lucas ASAP  (attachment: IMG_2083.jpg)
+You: Find one or both of these files and send it to Lucas, asap.
+
+Grok (Worked for 1m 43s): Found the matching data. Full word list of the 46 is not in the committed tree.
+The names in the chat (data/x11_affine_maps.json, data/x11_developing_map_full.json) are referenced as artefacts in paper/computational_note_d6.md on HeywoodGeblomi/prym-omega-ed6-h1plus, but they are absent from the current tree (and from omega-ed6-h1plus-measure).
+What is present and matches (46 shear / multi-twist words, exact 2:1 ratio, 20 independent closed geodesics, Aug-era Prym survey on X(1,1)):
+- data/x11_invariant_21_hits.json (summary + one example word + matrices)
+- data/multi_geodesic_spectra.json (survey counts: 20 exact 2:1, 35 in the 1.9-2.1 band, etc.)
+- The computational note that documents them
+Key content of the hits file:
+{
+  "description": "Prym-invariant multi-twist words inducing exact raw spectrum [1, 1/2, -1/2, -1] on geometric H1+ of X(1,1)",
+  "count_exact_21": 46,
+  "independent_closed_geodesics": 20,
+  "prototype": "X(1,1) D=5",
+  "example_word": [[1,3],[2,4],[2,4],[3,2],[0,2]],
+  "example_M_plus": [[-15,0,-2,0],[0,1,0,-3],[8,0,1,0],[0,2,0,-5]],
+  "example_A": [[31,10],[65,21]],
+  "claim_boundary": "geometric affine multi-twists on prototype surface; ratio exact 2:1; global average not claimed",
+  "promote_ready": false
+}
+Saved the two data files plus the note under /workspace/artifacts/x11_files/ (attachments: x11_invariant_21_hits.json 519 B; multi_geodesic_spectra.json 647 B). 15 sources.
+Paste that JSON to Lucas right now... The exhaustive list of all 46 words was never committed under the names Lucas used; only the summary and one worked example landed. If you have the original chat paste or a local copy of the missing x11_affine_maps.json, drop it and I will format/send the clean version.
+
+You: Send that to "Lucas" bot
+
+Grok (Worked for 33s): Sent to the Lucas bot. It received the hits summary and replied:
+"Thanks. That's the same file I already checked, so the 20 vs 10 question stays open: with only one example word, there's nothing to compare for reversed or rotated loops. There's also a small mismatch in that file. It's labelled X(1,1) D=5, but the example's numbers come out in the sqrt3 world, which is D=12, not the sqrt5 world D=5 should give. So the example word may have come from your D=12 work. The only way to settle the count is to regenerate the 46 words, either from the Grok chat that ran the survey or by rebuilding the search. I'll park this until you find that chat or want me to rebuild the search."
+The full list of 46 was never committed under the names in the original message. Only the summary with one example landed.

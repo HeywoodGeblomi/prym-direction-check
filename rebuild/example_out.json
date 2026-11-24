@@ -1,1 +1,20 @@
-$file:/workspace/publish_staging/prym-direction-check/rebuild/example_out.json
+{
+ "even index=H, odd=V": "2083 + 933*sqrt(5)",
+ "even index=V, odd=H": "2083 + 933*sqrt(5)",
+ "index<2=H, else V": "-173 - 75*sqrt(5)",
+ "index<2=V, else H": "-173 - 75*sqrt(5)",
+ "A_det": 1,
+ "A_trace": 52,
+ "A_eigs": [
+  "26 - 15*sqrt(3)",
+  "15*sqrt(3) + 26"
+ ],
+ "Mplus_charpoly": "(t**2 + 4*t + 1)*(t**2 + 14*t + 1)",
+ "Mplus_eigs": [
+  "-7 - 4*sqrt(3)",
+  "-7 + 4*sqrt(3)",
+  "-2 - sqrt(3)",
+  "-2 + sqrt(3)"
+ ],
+ "rho_A_equals_(2+sqrt3)^3": true
+}

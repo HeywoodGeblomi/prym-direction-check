@@ -1,1 +1,16 @@
-$file:/workspace/publish_staging/prym-direction-check/rebuild/survey_out.json
+{
+ "summary": {
+  "n_words": 9360,
+  "n_hyperbolic": 9216,
+  "n_directed_hits": 0,
+  "n_numeric_only": 0,
+  "n_up_to_rotation": 0,
+  "n_up_to_rotation_reversal": 0,
+  "n_up_to_symmetry": 0,
+  "n_distinct_abs_trace": 0,
+  "n_distinct_charpoly8": 0,
+  "merge_consistency_violations": 0
+ },
+ "hits": [],
+ "numeric_only": []
+}
