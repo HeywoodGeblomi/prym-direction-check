@@ -31,3 +31,15 @@ python3 square_tiled/validate.py
 ## Added data
 
 `darryl_share.txt` and the literature text files `rebuild/lit/ln_g4.txt` and `rebuild/lit/ln_g34.txt` are in this repo. The two literature PDFs could not be uploaded: the GitHub connector used here accepts text only, and `$file:` rejection for non-text files blocked `rebuild/lit/ln_g4.pdf` and `rebuild/lit/ln_g34.pdf`. I did not use `gh` or a raw API token as a workaround.
+
+## Restoring large and binary files
+
+The literature PDFs could not be stored as binary blobs through the connector used to publish this repo. They are here as base64 text: `rebuild/lit/ln_g4.pdf.b64` and `rebuild/lit/ln_g34.pdf.b64`.
+
+`BINARIES.sha256` lists the sha256 of each original file. To restore those originals, run:
+
+```
+python3 restore_binaries.py
+```
+
+That script uses only the Python standard library. It decodes the base64 files, writes the original paths, and checks each sha256.
